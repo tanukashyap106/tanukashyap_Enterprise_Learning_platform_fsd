@@ -1,0 +1,57 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { 
+  FiBookOpen, 
+  FiMessageSquare, 
+  FiFolder, 
+  FiAward, 
+  FiSettings,
+  FiCompass,
+  FiMenu,
+  FiHome,
+  FiX
+} from "react-icons/fi";
+
+const DashboardSidebar = ({ isOpen, toggleSidebar }) => {
+  return (
+    <>
+      <aside className={`dashboard-sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="sidebar-header">
+          <span className="sidebar-title">Menu</span>
+          <button className="sidebar-close-btn" onClick={toggleSidebar}>
+            <FiX />
+          </button>
+        </div>
+        <nav className="sidebar-nav">
+          <NavLink to="/student-home" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`} end>
+            <FiHome className="sidebar-icon" />
+            <span>Dashboard</span>
+          </NavLink>
+          
+          <NavLink to="/courses" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
+          <FiBookOpen className="sidebar-icon" />
+          <span>Courses</span>
+        </NavLink>
+
+        <NavLink to="/career-roadmap" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
+          <FiCompass className="sidebar-icon" />
+          <span>Career Roadmap</span>
+        </NavLink>
+        
+        <NavLink to="/certificate" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
+          <FiAward className="sidebar-icon" />
+          <span>Certificate</span>
+        </NavLink>
+
+        <NavLink to="/settings" className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}>
+          <FiSettings className="sidebar-icon" />
+          <span>Settings</span>
+        </NavLink>
+
+      </nav>
+    </aside>
+    </>
+  );
+};
+
+export default DashboardSidebar;

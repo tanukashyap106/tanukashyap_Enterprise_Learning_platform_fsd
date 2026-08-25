@@ -1,0 +1,611 @@
+/* Progress Tracking Page Stylesheet - SkillSphere Theme (1-to-1 Exact Match & High Contrast) */
+
+.ppWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ppMainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* TOAST ALERT NOTIFICATION */
+.ppToastAlert {
+  background: #1E1B18;
+  color: #FFFFFF;
+  border-left: 4px solid #F9572A;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 12px;
+}
+
+/* ── LEFT SIDEBAR ── */
+.ppLeftSidebar {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.ppLeftSidebar::-webkit-scrollbar { display: none; }
+.ppLeftSidebar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.ppSidebarHomeArchHeader, .sdSidebarHomeArchHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px 14px 12px;
+  margin-bottom: 8px;
+}
+
+.ppArchLine, .sdArchLine {
+  position: absolute;
+  top: -8px;
+  left: 36px;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed #FAD6C8;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 30px 0 0 0;
+  pointer-events: none;
+}
+
+.ppHomeCircularBtn, .sdHomeCircularBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.35);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.ppSidebarLevelWidget {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 14px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.levelHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.lvlTrophy { font-size: 20px; }
+.levelHeaderRow strong { display: block; font-size: 13px; font-weight: 800; color: #1E1B18; }
+.levelHeaderRow span { font-size: 10px; color: #64748B; }
+
+.lvlBarTrack { height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; margin-bottom: 4px; }
+.lvlBarFill { height: 100%; background: #F9572A; }
+.lvlXpSub { font-size: 9px; color: #94A3B8; display: block; text-align: right; margin-bottom: 12px; }
+
+.mountainClimberBox {
+  background: #FFF0EB;
+  border: 1px solid #FAD6C8;
+  border-radius: 16px;
+  padding: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mountainClimberBox strong { font-size: 11px; font-weight: 800; color: #F9572A; display: block; margin-bottom: 2px; }
+.mountainClimberBox p { font-size: 9px; color: #64748B; margin: 0; line-height: 1.3; }
+.mountainGraphic { font-size: 22px; text-align: right; margin-top: 4px; }
+
+/* ── RIGHT MAIN BODY AREA ── */
+.ppRightBodyArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ppPageHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ppPageHeader h1 { font-size: 28px; font-weight: 800; color: #1E1B18; margin: 0 0 4px 0; }
+.ppPageHeader p { font-size: 14px; color: #64748B; margin: 0; }
+
+.ppHeaderButtonsRow { display: flex; gap: 12px; }
+
+.ppTimeDropdownBtn {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 99px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1E1B18;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.btnShareProgress {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 99px;
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(249, 87, 42, 0.08);
+  transition: all 0.2s ease;
+}
+
+.btnShareProgress:hover {
+  background: #F9572A;
+  color: #FFFFFF;
+  border-color: #F9572A;
+}
+
+/* SUB TABS ROW */
+.ppSubTabsRow {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #F3EBE1;
+  padding-bottom: 4px;
+}
+
+.ppTab {
+  background: transparent;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 8px 4px 12px 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.ppTab.active { color: #F9572A; font-weight: 800; }
+.ppTab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 3px;
+  background: #F9572A;
+  border-radius: 99px;
+}
+
+/* 4 STAT CARDS ROW */
+.ppStatCardsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.ppStatCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.ppStatCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.statIcon {
+  width: 42px; height: 42px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+}
+
+.statIcon.orange { background: #FFF0EB; color: #F9572A; }
+.statIcon.brown { background: #FEF3C7; color: #D97706; }
+.statIcon.black { background: #F1F5F9; color: #1E1B18; }
+.statIcon.red { background: #FEE2E2; color: #EF4444; }
+.statIcon.gold { background: #FEF08A; color: #CA8A04; }
+
+.ppStatCard .lbl { font-size: 11px; color: #64748B; font-weight: 700; display: block; margin-bottom: 4px; }
+.ppStatCard strong { font-size: 20px; font-weight: 800; color: #1E1B18; display: block; line-height: 1.1; }
+
+.pctUp.green { font-size: 10px; font-weight: 800; color: #10B981; display: flex; align-items: center; gap: 4px; margin-top: 6px; }
+.blueSub { font-size: 10px; color: #0284C7; font-weight: 700; display: block; margin-top: 6px; }
+.streakBest { font-size: 10px; color: #F9572A; font-weight: 700; display: block; margin-top: 6px; }
+
+/* 2-COLUMN MAIN GRID */
+.ppGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+}
+
+.ppCenterColumn { display: flex; flex-direction: column; gap: 20px; }
+
+/* CHARTS ROW */
+.ppChartsRow {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+
+.ppChartCard, .ppCardBlock, .ppWidgetCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.chartTitleRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.chartTitleRow h4 { font-size: 15px; font-weight: 800; color: #1E1B18; margin: 0; display: flex; align-items: center; gap: 6px; }
+.chartFilterBtn { font-size: 11px; font-weight: 700; color: #64748B; background: #FAF8F5; border: 1px solid #F3EBE1; padding: 5px 12px; border-radius: 99px; cursor: pointer; }
+.viewAllLink { font-size: 11px; font-weight: 800; color: #F9572A; cursor: pointer; }
+
+/* WAVE CHART */
+.waveChartContainer { position: relative; width: 100%; height: 180px; }
+.waveSvg { width: 100%; height: 140px; }
+
+.waveTooltip {
+  position: absolute;
+  top: 15px; left: 52%;
+  transform: translateX(-50%);
+  background: #1E1B18;
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 9px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.waveTooltip span { font-size: 8px; color: #94A3B8; display: block; }
+.waveTooltip strong { font-size: 11px; color: #F9572A; }
+
+.xLabelsRow { display: flex; justify-content: space-between; padding: 0 30px; font-size: 9px; color: #94A3B8; margin-top: -10px; }
+
+/* DONUT CHART */
+.donutChartContainer { position: relative; width: 120px; height: 120px; margin: 0 auto 14px auto; }
+.donutSvg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.donutCenterText { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.donutCenterText strong { font-size: 16px; font-weight: 800; color: #1E1B18; display: block; line-height: 1; }
+.donutCenterText span { font-size: 9px; color: #94A3B8; }
+
+.donutLegendList { display: flex; flex-direction: column; gap: 8px; }
+.legItem { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.legItem .dot { width: 9px; height: 9px; border-radius: 50%; }
+.legItem .dot.orange { background: #F9572A; }
+.legItem .dot.green { background: #10B981; }
+.legItem .dot.purple { background: #8B5CF6; }
+.legItem .dot.blue { background: #0284C7; }
+.legItem .dot.brown { background: #D97706; }
+.legItem .name { flex: 1; color: #64748B; font-weight: 600; }
+.legItem strong { color: #1E1B18; font-weight: 800; }
+
+/* MIDDLE ROW */
+.ppMiddleGridRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+/* HEATMAP */
+.heatmapContainer { display: flex; flex-direction: column; gap: 10px; }
+.monthsHeader { display: flex; justify-content: space-around; font-size: 10px; font-weight: 700; color: #94A3B8; padding-left: 30px; }
+.heatmapGrid { display: flex; gap: 10px; }
+.dayLabels { display: flex; flex-direction: column; justify-content: space-between; font-size: 8px; color: #94A3B8; height: 115px; }
+
+.heatmapCellsMatrix {
+  display: grid;
+  grid-template-rows: repeat(7, 12px);
+  grid-auto-flow: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.hmCell { width: 12px; height: 12px; border-radius: 3px; background: #F1F5F9; }
+.hmCell.level-1 { background: #FED7AA; }
+.hmCell.level-2 { background: #FB923C; }
+.hmCell.level-3 { background: #F9572A; }
+.hmCell.level-4 { background: #C2410C; }
+
+.heatmapScaleRow { display: flex; align-items: center; justify-content: flex-end; gap: 6px; font-size: 9px; color: #94A3B8; margin-top: 6px; }
+.scaleCells { display: flex; gap: 3px; }
+
+/* SUBJECT PROGRESS STACK */
+.subjectProgressStack { display: flex; flex-direction: column; gap: 14px; }
+
+.subjProgItem { display: flex; align-items: center; gap: 12px; }
+
+.subjIcon {
+  width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #FFF; flex-shrink: 0;
+}
+
+.subjIcon.green { background: #052E16; }
+.subjIcon.blue { background: #082F49; }
+.subjIcon.purple { background: #4C1D95; }
+.subjIcon.pink { background: #831843; }
+.subjIcon.teal { background: #042F2E; }
+
+.subjInfo { flex: 1; }
+.subjInfo h5 { font-size: 12px; font-weight: 800; color: #1E1B18; margin: 0 0 4px 0; }
+
+.subjTrack { height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; }
+.subjFill { height: 100%; background: #F9572A; }
+
+.subjPct { font-size: 12px; font-weight: 800; color: #1E1B18; width: 34px; text-align: right; }
+.subjMods { font-size: 10px; color: #94A3B8; width: 75px; text-align: right; }
+
+/* RECENT ACTIVITY HORIZONTAL TIMELINE */
+.horizontalTimelineContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.timelineTrackLine {
+  position: absolute;
+  top: 26px; left: 30px; right: 30px;
+  height: 2px;
+  background: #E2E8F0;
+  z-index: 1;
+}
+
+.timelineNodeStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.nodeCircle {
+  width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #FFF; border: 3px solid #FFFFFF; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin-bottom: 8px;
+}
+
+.nodeCircle.green { background: #10B981; }
+.nodeCircle.purple { background: #8B5CF6; }
+.nodeCircle.orange { background: #F9572A; }
+.nodeCircle.red { background: #EF4444; }
+.nodeCircle.blue { background: #0284C7; }
+
+.nodeInfo h5 { font-size: 11px; font-weight: 800; margin: 0 0 2px 0; }
+.nodeInfo span { font-size: 9px; color: #64748B; display: block; }
+.nodeInfo .timeSub { font-size: 8px; color: #94A3B8; margin-bottom: 4px; }
+.xpBadge.green { font-size: 9px; font-weight: 800; color: #10B981; display: inline-block; background: #ECFDF5; padding: 1px 6px; border-radius: 99px; }
+
+/* RIGHT COLUMN SIDEBAR WIDGETS */
+.ppRightSidebar { display: flex; flex-direction: column; gap: 20px; }
+
+.ppWidgetCard h4 { font-size: 15px; font-weight: 800; color: #1E1B18; margin: 0 0 14px 0; }
+
+.widgetTitleRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.editGoalLink { font-size: 11px; font-weight: 800; color: #F9572A; cursor: pointer; }
+
+/* ARCH GAUGE */
+.archGaugeContainer { position: relative; width: 140px; height: 80px; margin: 0 auto 6px auto; }
+.archSvg { width: 100%; height: 100%; }
+
+.archCenterText { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); text-align: center; }
+.archCenterText strong { font-size: 22px; font-weight: 800; color: #1E1B18; display: block; line-height: 1; }
+.archCenterText span { font-size: 9px; color: #94A3B8; }
+
+.archSubtext { font-size: 10px; color: #64748B; text-align: center; margin: 0; }
+
+/* INSIGHTS */
+.insightsList { display: flex; flex-direction: column; gap: 12px; }
+
+.insightItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.inIcon { width: 34px; height: 34px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.inIcon.orange { background: #FFF0EB; color: #F9572A; }
+.inIcon.green { background: #DCFCE7; color: #16A34A; }
+.inIcon.gold { background: #FEF08A; color: #CA8A04; }
+
+.insightItem h5 { font-size: 12px; font-weight: 800; color: #1E1B18; margin: 0 0 2px 0; }
+.insightItem span { font-size: 10px; color: #64748B; display: block; }
+
+/* MILESTONE TROPHY CARD */
+.milestoneCard {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.mBadgeHex {
+  width: 48px; height: 48px; border-radius: 16px; background: linear-gradient(135deg, #F9572A 0%, #D97706 100%); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 8px; box-shadow: 0 6px 16px rgba(249, 87, 42, 0.25);
+}
+
+.milestoneCard h5 { font-size: 13px; font-weight: 800; color: #1E1B18; margin: 0 0 2px 0; }
+.milestoneCard p { font-size: 10px; color: #64748B; margin: 0 0 10px 0; }
+
+.mTrack { width: 100%; height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; margin-bottom: 4px; }
+.mFill { height: 100%; background: #F9572A; }
+
+.mXpText { font-size: 9px; color: #94A3B8; display: block; margin-bottom: 12px; }
+
+.btnViewMilestones {
+  background: #FFFFFF;
+  color: #1E1B18;
+  border: 1px solid #E2E8F0;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 1100px) {
+  .ppStatCardsRow { grid-template-columns: repeat(2, 1fr); }
+  .ppChartsRow, .ppMiddleGridRow { grid-template-columns: 1fr; }
+  .ppGridContainer { grid-template-columns: 1fr; }
+  .horizontalTimelineContainer { grid-template-columns: 1fr; }
+  .timelineTrackLine { display: none; }
+}
+
+/* ── DARK THEME STYLES (PURE HIGH-CONTRAST DARK MODE) ── */
+.ppWrapper.dark-theme,
+[data-theme="dark"] .ppWrapper {
+  background: #0F172A !important;
+  color: #F8FAFC !important;
+}
+
+.ppWrapper.dark-theme .ppLeftSidebar,
+.ppWrapper.dark-theme .sdLeftSidebar,
+.ppWrapper.dark-theme .ppStatCard,
+.ppWrapper.dark-theme .ppChartCard,
+.ppWrapper.dark-theme .ppCardBlock,
+.ppWrapper.dark-theme .ppWidgetCard,
+.ppWrapper.dark-theme .ppSidebarLevelWidget {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.ppWrapper.dark-theme .insightItem,
+.ppWrapper.dark-theme .milestoneCard {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+.ppWrapper.dark-theme .ppPageHeader h1,
+.ppWrapper.dark-theme .chartTitleRow h4,
+.ppWrapper.dark-theme .widgetTitleRow h4,
+.ppWrapper.dark-theme .ppStatCard strong,
+.ppWrapper.dark-theme .donutCenterText strong,
+.ppWrapper.dark-theme .legItem strong,
+.ppWrapper.dark-theme .subjInfo h5,
+.ppWrapper.dark-theme .subjPct,
+.ppWrapper.dark-theme .insightItem h5,
+.ppWrapper.dark-theme .milestoneCard h5,
+.ppWrapper.dark-theme .levelHeaderRow strong,
+.ppWrapper.dark-theme .archCenterText strong {
+  color: #F8FAFC !important;
+}
+
+.ppWrapper.dark-theme .ppPageHeader p,
+.ppWrapper.dark-theme .ppStatCard .lbl,
+.ppWrapper.dark-theme .donutCenterText span,
+.ppWrapper.dark-theme .legItem .name,
+.ppWrapper.dark-theme .subjMods,
+.ppWrapper.dark-theme .insightItem span,
+.ppWrapper.dark-theme .milestoneCard p,
+.ppWrapper.dark-theme .levelHeaderRow span,
+.ppWrapper.dark-theme .xLabelsRow,
+.ppWrapper.dark-theme .monthsHeader,
+.ppWrapper.dark-theme .dayLabels,
+.ppWrapper.dark-theme .heatmapScaleRow,
+.ppWrapper.dark-theme .archCenterText span,
+.ppWrapper.dark-theme .archSubtext {
+  color: #94A3B8 !important;
+}
+
+.ppWrapper.dark-theme .ppTimeDropdownBtn,
+.ppWrapper.dark-theme .btnShareProgress,
+.ppWrapper.dark-theme .chartFilterBtn,
+.ppWrapper.dark-theme .btnViewMilestones {
+  background: #0F172A !important;
+  color: #F8FAFC !important;
+  border-color: #334155 !important;
+}
+
+.ppWrapper.dark-theme .ppTimeDropdownBtn:hover,
+.ppWrapper.dark-theme .btnShareProgress:hover,
+.ppWrapper.dark-theme .chartFilterBtn:hover,
+.ppWrapper.dark-theme .btnViewMilestones:hover {
+  background: #1E293B !important;
+  border-color: #F9572A !important;
+}
+
+.ppWrapper.dark-theme .hmCell {
+  background: #334155;
+}
+
+.ppWrapper.dark-theme .subjTrack,
+.ppWrapper.dark-theme .lvlBarTrack,
+.ppWrapper.dark-theme .mTrack,
+.ppWrapper.dark-theme .archBg {
+  background: #334155;
+  stroke: #334155;
+}
+
+.ppWrapper.dark-theme .ppTab {
+  color: #94A3B8;
+}
+
+.ppWrapper.dark-theme .ppTab.active {
+  color: #F9572A;
+}
+
+.ppWrapper.dark-theme .ppSubTabsRow {
+  border-bottom-color: #334155;
+}

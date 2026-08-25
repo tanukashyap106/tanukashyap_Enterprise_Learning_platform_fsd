@@ -1,0 +1,810 @@
+/* Dedicated Certificates Page Stylesheet - SkillSphere Theme (1-to-1 Dark Theme Match) */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.cpWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cpMainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* TOAST ALERT NOTIFICATION */
+.cpToastAlert {
+  background: #1E1B18;
+  color: #FFFFFF;
+  border-left: 4px solid #F9572A;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+  margin-bottom: 12px;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── LEFT SIDEBAR ── */
+.cpLeftSidebar {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.cpLeftSidebar::-webkit-scrollbar { display: none; }
+.cpLeftSidebar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.cpSidebarHomeArchHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px 14px 12px;
+  margin-bottom: 8px;
+}
+
+.cpArchLine {
+  position: absolute;
+  top: -8px;
+  left: 36px;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed #FAD6C8;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 30px 0 0 0;
+  pointer-events: none;
+}
+
+.cpHomeCircularBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.35);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.cpSidebarLevelWidget {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 14px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.levelHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.lvlTrophy { font-size: 20px; }
+.levelHeaderRow strong { display: block; font-size: 13px; font-weight: 800; color: #1E1B18; }
+.levelHeaderRow span { font-size: 10px; color: #64748B; }
+
+.lvlBarTrack { height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; margin-bottom: 4px; }
+.lvlBarFill { height: 100%; background: #F9572A; }
+.lvlXpSub { font-size: 9px; color: #94A3B8; display: block; text-align: right; margin-bottom: 10px; }
+
+.btnViewRewards {
+  width: 100%;
+  background: #FFF0EB;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+  padding: 6px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ── RIGHT MAIN BODY AREA ── */
+.cpRightBodyArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cpPageHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cpPageHeader h1 { font-size: 28px; font-weight: 800; color: #1E1B18; margin: 0 0 4px 0; }
+.cpPageHeader p { font-size: 14px; color: #64748B; margin: 0; }
+
+/* SUB TABS ROW */
+.cpSubTabsRow {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #F3EBE1;
+  padding-bottom: 4px;
+}
+
+.cpTab {
+  background: transparent;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 8px 4px 12px 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cpTab.active { color: #F9572A; font-weight: 800; }
+.cpTab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 3px;
+  background: #F9572A;
+  border-radius: 99px;
+}
+
+/* 2-COLUMN MAIN GRID */
+.cpGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 24px;
+}
+
+/* FEATURED CERTIFICATE BLOCK */
+.cpFeaturedBlockCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  margin-bottom: 24px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.cpCanvasWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cpCanvasLabel { font-size: 14px; font-weight: 800; color: #1E1B18; }
+.cpCanvasSubLabel { font-size: 11px; color: #94A3B8; margin-bottom: 14px; }
+
+/* CERTIFICATE PARCHMENT CANVAS (PRESERVED AS WHITE PARCHMENT DOCUMENT) */
+.cpCertificateCanvas {
+  background: #FFFDF9;
+  border: 8px solid #FDE8CD;
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+  box-shadow: inset 0 0 20px rgba(245, 158, 11, 0.05), 0 6px 20px rgba(0,0,0,0.04);
+}
+
+.certInnerBorder {
+  border: 2px dashed #FAD6C8;
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  position: relative;
+}
+
+.certGoldStamp {
+  position: absolute;
+  top: 12px; right: 14px;
+  background: #78350F;
+  color: #FDE68A;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 99px;
+  border: 1px solid #F59E0B;
+}
+
+.certBrandHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #F9572A;
+  margin-bottom: 8px;
+}
+
+.certBrandHeader .hex { font-size: 15px; }
+
+.certMainTitle {
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #1E1B18;
+  margin: 0 0 2px 0;
+}
+
+.certCertifyText {
+  font-size: 10px;
+  color: #94A3B8;
+  font-style: italic;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.certRecipientName {
+  font-family: 'Great Vibes', 'Brush Script MT', cursive;
+  font-size: 32px;
+  color: #78350F;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+.certCompletionDesc {
+  font-size: 10px;
+  color: #475569;
+  margin: 6px 0 16px 0;
+  line-height: 1.4;
+}
+
+.certCompletionDesc strong { color: #1E1B18; }
+.certCompletionDesc .pathSub { font-size: 9px; color: #94A3B8; }
+
+.certCanvasFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #FAD6C8;
+  padding-top: 10px;
+}
+
+.signCol {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.signCol .dateVal { font-size: 10px; font-weight: 800; color: #1E1B18; }
+.signCol .signatureScript { font-family: 'Great Vibes', cursive; font-size: 18px; color: #1E1B18; }
+.signCol .lbl { font-size: 8px; color: #94A3B8; margin-top: 2px; }
+
+.ribbonSeal { font-size: 26px; }
+
+.cpCanvasActionsRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.btnDownloadCert {
+  background: #F9572A;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+.btnDownloadCert:hover { background: #EA580C; }
+
+.btnShareLinkedIn {
+  background: #FFFFFF;
+  color: #0A66C2;
+  border: 1px solid #0A66C2;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s ease;
+}
+
+.btnShareLinkedIn:hover { background: #F0F9FF; }
+
+.btnShareOutline {
+  background: #FFFFFF;
+  color: #64748B;
+  border: 1px solid #E2E8F0;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* DETAILS CARD */
+.cpDetailsCard {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.certLogoHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.certCompLogoBadge {
+  width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #FFF; flex-shrink: 0;
+}
+
+.certLogoHeaderRow h4 { font-size: 14px; font-weight: 800; color: #1E1B18; margin: 0 0 2px 0; }
+.certLogoHeaderRow .modSub { font-size: 10px; color: #64748B; }
+
+.tagCompletedGreen {
+  background: #ECFDF5;
+  color: #10B981;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 99px;
+  margin-left: auto;
+}
+
+.tagLockedGray {
+  background: #F1F5F9;
+  color: #64748B;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 99px;
+  margin-left: auto;
+}
+
+.certFieldList { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.fieldItem { display: flex; align-items: center; gap: 10px; }
+.fieldItem .fIcon { width: 28px; height: 28px; border-radius: 8px; background: #FFF0EB; color: #F9572A; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+.fieldItem .lbl { font-size: 9px; color: #94A3B8; display: block; }
+.fieldItem strong { font-size: 11px; color: #1E1B18; display: block; }
+
+.verifiedCertBox {
+  background: #ECFDF5;
+  border: 1px solid #6EE7B7;
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lockedCertBox {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chkIconGreen { color: #10B981; font-size: 18px; flex-shrink: 0; }
+.lockIconGray { color: #64748B; font-size: 18px; flex-shrink: 0; }
+.verifiedCertBox strong { font-size: 11px; font-weight: 800; color: #065F46; display: block; }
+.verifiedCertBox span { font-size: 9px; color: #047857; }
+.lockedCertBox strong { font-size: 11px; font-weight: 800; color: #334155; display: block; }
+.lockedCertBox span { font-size: 9px; color: #64748B; }
+
+/* SECTIONS */
+.cpSectionBlock { margin-bottom: 24px; }
+.sectionHeaderRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.sectionHeaderRow h3 { font-size: 16px; font-weight: 800; color: #1E1B18; margin: 0; }
+.viewAllLink { font-size: 11px; font-weight: 800; color: #F9572A; cursor: pointer; }
+
+.earnedCertsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.earnedCertCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.earnedCertCard.activeSelected {
+  border-color: #F9572A;
+  box-shadow: 0 6px 20px rgba(249, 87, 42, 0.15);
+  background: #FFF0EB;
+}
+
+.earnedCertCard:hover { transform: translateY(-3px); border-color: #FAD6C8; }
+
+.certCardIcon {
+  width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+}
+
+.certCardInfo { flex: 1; }
+.certCardInfo h4 { font-size: 12px; font-weight: 800; color: #1E1B18; margin: 0 0 2px 0; }
+.certCardInfo .modSub { font-size: 9px; color: #64748B; display: block; }
+.certCardInfo .dateSub { font-size: 8px; color: #94A3B8; display: block; margin-bottom: 6px; }
+
+.certCardFooter { display: flex; justify-content: space-between; align-items: center; }
+.verifiedTag { font-size: 9px; font-weight: 800; color: #10B981; display: flex; align-items: center; gap: 4px; }
+
+.btnDownloadSmall {
+  background: #FAF8F5;
+  border: 1px solid #E2E8F0;
+  color: #F9572A;
+  width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; cursor: pointer;
+}
+
+.btnDownloadSmall:hover { background: #F9572A; color: #FFFFFF; }
+
+.cpCarouselArrowRight {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  z-index: 5;
+}
+
+/* CERTIFICATES TO EARN GRID */
+.certsToEarnGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.toEarnCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.85;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.3s ease;
+}
+
+.toEarnCard.activeSelected {
+  border-color: #0284C7;
+  background: #E0F2FE;
+  opacity: 1;
+}
+
+.toEarnCard:hover { transform: translateY(-3px); border-color: #CBD5E1; }
+
+.toEarnIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.toEarnInfo { flex: 1; }
+.toEarnInfo h4 { font-size: 12px; font-weight: 800; color: #1E1B18; margin: 0 0 1px 0; }
+.toEarnInfo .modSub { font-size: 9px; color: #64748B; display: block; }
+.lockSubText { font-size: 8px; color: #94A3B8; display: block; margin-bottom: 4px; }
+
+.pctTrackRow { display: flex; align-items: center; gap: 6px; }
+.pTrack { flex: 1; height: 4px; background: #E2E8F0; border-radius: 99px; overflow: hidden; }
+.pFill { height: 100%; background: #94A3B8; }
+.pctZero { font-size: 9px; color: #94A3B8; font-weight: 700; }
+
+.cardLockIcon { color: #CBD5E1; font-size: 12px; }
+
+/* RIGHT COLUMN SIDEBAR WIDGETS */
+.cpRightSidebar { display: flex; flex-direction: column; gap: 20px; }
+
+.cpWidgetCard { background: #FFFFFF; border: 1px solid #F3EBE1; border-radius: 24px; padding: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02); transition: background 0.3s ease, border-color 0.3s ease; }
+.cpWidgetCard h4 { font-size: 14px; font-weight: 800; color: #1E1B18; margin: 0 0 14px 0; }
+
+.summaryList { display: flex; flex-direction: column; gap: 12px; }
+
+.summaryItem { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 16px; background: #FAF8F5; border: 1px solid #F3EBE1; transition: background 0.3s ease, border-color 0.3s ease; }
+
+.sIcon { width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.sIcon.green { background: #DCFCE7; }
+.sIcon.orange { background: #FFF0EB; }
+.sIcon.purple { background: #F3E8FF; }
+
+.summaryItem strong { display: block; font-size: 14px; font-weight: 800; color: #1E1B18; line-height: 1; }
+.summaryItem span { font-size: 10px; color: #64748B; font-weight: 600; }
+
+.cpProgressGaugeContainer { position: relative; width: 130px; height: 130px; margin: 0 auto 12px auto; }
+.gaugeSvg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.gaugeBg { fill: none; stroke: #F1F5F9; stroke-width: 10; }
+.gaugeFill { fill: none; stroke: #F9572A; stroke-width: 10; stroke-linecap: round; }
+
+.gaugeCenterText { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.gaugeCenterText strong { font-size: 24px; font-weight: 800; color: #1E1B18; }
+
+.gaugeSubtextRow { text-align: center; }
+.gaugeSubtextRow strong { font-size: 12px; font-weight: 800; color: #1E1B18; display: block; }
+.gaugeSubtextRow span { font-size: 10px; color: #64748B; }
+
+.benefitsList { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 11px; color: #475569; font-weight: 600; }
+.benefitsList li { display: flex; align-items: center; gap: 8px; }
+
+.pathProgressList { display: flex; flex-direction: column; gap: 12px; }
+
+.pathProgItem { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 16px; background: #FAF8F5; border: 1px solid #F3EBE1; transition: background 0.3s ease, border-color 0.3s ease; }
+.pIcon.dark { width: 30px; height: 30px; border-radius: 8px; background: #082F49; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+.pInfo { flex: 1; }
+.pInfo h5 { font-size: 11px; font-weight: 800; color: #1E1B18; margin: 0 0 2px 0; }
+.pInfo span { font-size: 9px; color: #94A3B8; display: block; margin-bottom: 4px; }
+.pctText { font-size: 11px; font-weight: 800; color: #1E1B18; }
+
+.shareLinkedInBanner {
+  background: linear-gradient(135deg, #0A66C2 0%, #004182 100%);
+  border-radius: 24px;
+  padding: 20px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shareLinkedInBanner h5 { font-size: 14px; font-weight: 800; margin: 0 0 4px 0; }
+.shareLinkedInBanner p { font-size: 10px; color: #E0F2FE; margin: 0 0 12px 0; line-height: 1.3; }
+
+.btnInShareNow {
+  background: #FFFFFF;
+  color: #0A66C2;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trophyGraphic { font-size: 36px; }
+
+@media (max-width: 1100px) {
+  .cpFeaturedBlockCard { grid-template-columns: 1fr; }
+  .earnedCertsGrid, .certsToEarnGrid { grid-template-columns: repeat(2, 1fr); }
+  .cpGridContainer { grid-template-columns: 1fr; }
+}
+
+/* ── DARK THEME STYLES (PURE HIGH-CONTRAST DARK MODE MATCHING REFERENCE IMAGE 2) ── */
+.cpWrapper.dark-theme,
+[data-theme="dark"] .cpWrapper,
+.dark-theme .cpWrapper {
+  background: #0F172A !important;
+  color: #F8FAFC !important;
+}
+
+.cpWrapper.dark-theme .cpLeftSidebar,
+.cpWrapper.dark-theme .sdLeftSidebar,
+.cpWrapper.dark-theme .cpFeaturedBlockCard,
+.cpWrapper.dark-theme .cpDetailsCard,
+.cpWrapper.dark-theme .earnedCertCard,
+.cpWrapper.dark-theme .toEarnCard,
+.cpWrapper.dark-theme .cpWidgetCard,
+.cpWrapper.dark-theme .cpSidebarLevelWidget,
+[data-theme="dark"] .cpFeaturedBlockCard,
+[data-theme="dark"] .cpDetailsCard,
+[data-theme="dark"] .earnedCertCard,
+[data-theme="dark"] .toEarnCard,
+[data-theme="dark"] .cpWidgetCard {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.cpWrapper.dark-theme .summaryItem,
+.cpWrapper.dark-theme .pathProgItem {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+.cpWrapper.dark-theme .cpPageHeader h1,
+.cpWrapper.dark-theme .sectionHeaderRow h3,
+.cpWrapper.dark-theme .cpCanvasLabel,
+.cpWrapper.dark-theme .certLogoHeaderRow h4,
+.cpWrapper.dark-theme .earnedCertCard h4,
+.cpWrapper.dark-theme .toEarnCard h4,
+.cpWrapper.dark-theme .cpWidgetCard h4,
+.cpWrapper.dark-theme .summaryItem strong,
+.cpWrapper.dark-theme .gaugeCenterText strong,
+.cpWrapper.dark-theme .gaugeSubtextRow strong,
+.cpWrapper.dark-theme .pInfo h5,
+.cpWrapper.dark-theme .pctText,
+.cpWrapper.dark-theme .fieldItem strong,
+.cpWrapper.dark-theme .levelHeaderRow strong,
+[data-theme="dark"] .cpPageHeader h1,
+[data-theme="dark"] .sectionHeaderRow h3,
+[data-theme="dark"] .certLogoHeaderRow h4,
+[data-theme="dark"] .cpWidgetCard h4 {
+  color: #F8FAFC !important;
+}
+
+.cpWrapper.dark-theme .cpPageHeader p,
+.cpWrapper.dark-theme .cpCanvasSubLabel,
+.cpWrapper.dark-theme .certLogoHeaderRow .modSub,
+.cpWrapper.dark-theme .summaryItem span,
+.cpWrapper.dark-theme .gaugeSubtextRow span,
+.cpWrapper.dark-theme .benefitsList,
+.cpWrapper.dark-theme .fieldItem .lbl,
+.cpWrapper.dark-theme .levelHeaderRow span,
+.cpWrapper.dark-theme .certCardInfo .modSub,
+.cpWrapper.dark-theme .certCardInfo .dateSub,
+.cpWrapper.dark-theme .toEarnInfo .modSub,
+.cpWrapper.dark-theme .lockSubText {
+  color: #94A3B8 !important;
+}
+
+.cpWrapper.dark-theme .btnDownloadCert,
+.cpWrapper.dark-theme .btnShareLinkedIn,
+.cpWrapper.dark-theme .btnShareOutline,
+.cpWrapper.dark-theme .btnViewRewards {
+  background: #0F172A !important;
+  color: #F8FAFC !important;
+  border-color: #334155 !important;
+}
+
+.cpWrapper.dark-theme .fieldItem .fIcon {
+  background: #0F172A !important;
+  color: #F9572A !important;
+  border: 1px solid #334155 !important;
+}
+
+.cpWrapper.dark-theme .tagCompletedGreen {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #10B981 !important;
+}
+
+.cpWrapper.dark-theme .tagLockedGray {
+  background: #0F172A !important;
+  color: #94A3B8 !important;
+}
+
+.cpWrapper.dark-theme .verifiedCertBox {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+.cpWrapper.dark-theme .verifiedCertBox strong {
+  color: #34D399 !important;
+}
+
+.cpWrapper.dark-theme .verifiedCertBox span {
+  color: #A7F3D0 !important;
+}
+
+.cpWrapper.dark-theme .lockedCertBox {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+}
+
+.cpWrapper.dark-theme .lockedCertBox strong {
+  color: #F8FAFC !important;
+}
+
+.cpWrapper.dark-theme .lockedCertBox span {
+  color: #94A3B8 !important;
+}
+
+.cpWrapper.dark-theme .gaugeBg {
+  stroke: #334155 !important;
+}
+
+.cpWrapper.dark-theme .gaugeFill {
+  stroke: #F9572A !important;
+}
+
+.cpWrapper.dark-theme .cpTab {
+  color: #94A3B8 !important;
+}
+
+.cpWrapper.dark-theme .cpTab.active {
+  color: #F9572A !important;
+}
+
+.cpWrapper.dark-theme .cpSubTabsRow {
+  border-bottom-color: #334155 !important;
+}
+
+.cpWrapper.dark-theme .earnedCertCard.activeSelected {
+  background: rgba(249, 87, 42, 0.15) !important;
+  border-color: #F9572A !important;
+}
+
+.cpWrapper.dark-theme .toEarnCard.activeSelected {
+  background: rgba(2, 132, 199, 0.15) !important;
+  border-color: #0284C7 !important;
+}
+
+.cpWrapper.dark-theme .pTrack,
+.cpWrapper.dark-theme .lvlBarTrack {
+  background: #334155 !important;
+}

@@ -1,0 +1,810 @@
+.workHubPage {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  padding-top: 120px;
+}
+
+.workHubContainer {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── HERO SECTION (3-COLUMN LAYOUT) ── */
+.whHeroSection {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 70px;
+}
+
+.whHeroLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.whBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF0EB;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+  padding: 8px 18px;
+  border-radius: 99px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.whHeroLeft h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1E1B18;
+  margin-bottom: 18px;
+  letter-spacing: -1.2px;
+}
+
+.whHeroLeft h1 span {
+  color: #F9572A;
+  background: linear-gradient(135deg, #F9572A 0%, #FF7A45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.whHeroLeft p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #5A5A66;
+  margin-bottom: 28px;
+}
+
+.whHeroButtons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.whBtnPrimary {
+  padding: 13px 28px;
+  background: #F9572A;
+  border: 1px solid #F9572A;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(249, 87, 42, 0.3);
+}
+
+.whBtnPrimary:hover {
+  background: #E0481D;
+  transform: translateY(-2px);
+}
+
+.whBtnSecondary {
+  padding: 13px 26px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #1E1B18;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.whBtnSecondary:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+  background: #FFF0EB;
+  transform: translateY(-2px);
+}
+
+.whHeroMicroPills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.whMicroPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.whPillIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #FFF0EB;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.whPillText h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0;
+}
+
+.whPillText span {
+  font-size: 10px;
+  color: #64748B;
+  display: block;
+}
+
+/* CENTER: CORPORATE TEAM HERO GRAPHIC */
+.whHeroCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.whHeroGraphicWrapper {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.whHeroTeamImg {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 24px;
+  filter: drop-shadow(0 16px 36px rgba(249, 87, 42, 0.12));
+  animation: whTeamFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes whTeamFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* RIGHT: PERFORMANCE OVERVIEW WIDGET CARD */
+.whHeroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.perfWidgetCard {
+  background: var(--bg-card, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.perfWidgetHeader h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-primary, #ffffff);
+  margin: 0 0 14px 0;
+}
+
+.donutLegendList {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.donutLegendList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary, #cbd5e1);
+}
+
+.donutLegendList li strong {
+  color: var(--text-primary, #ffffff);
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.completionRateWidget {
+  background: var(--bg-card, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12));
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+}
+
+.completionRateWidget h5 {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary, #cbd5e1);
+  margin: 0 0 4px 0;
+}
+
+.completionRateWidget strong {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-primary, #ffffff);
+  display: block;
+}
+
+.completionRateWidget span {
+  font-size: 10px;
+  color: var(--text-muted, #94A3B8);
+}  margin-bottom: 8px;
+  display: block;
+}
+
+.compTrack {
+  width: 100%;
+  height: 6px;
+  background: #FFE8DF;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.compFill {
+  width: 78%;
+  height: 100%;
+  background: #F9572A;
+  border-radius: 99px;
+}
+
+/* ── STATS BAR (6 METRICS) ── */
+.whStatsBarContainer {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 90px;
+  box-shadow: 0 6px 24px rgba(249, 87, 42, 0.04);
+}
+
+.whStatItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.whStatIconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #FFF0EB;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.whStatText strong {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1E1B18;
+  line-height: 1.1;
+  display: block;
+}
+
+.whStatText span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+/* ── POWERFUL TOOLS FOR YOUR ORGANIZATION (6 CARDS - 3x2) ── */
+.orgToolsSection {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.orgToolsTag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #F9572A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.orgToolsSection h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 12px;
+}
+
+.orgToolsGrid3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.orgToolCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.orgToolCard:hover {
+  transform: translateY(-5px);
+  border-color: #FAD6C8;
+  box-shadow: 0 14px 30px rgba(249, 87, 42, 0.08);
+}
+
+.orgToolIconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #FFF0EB;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.orgToolCard h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 10px;
+}
+
+.orgToolCard p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 24px;
+}
+
+.orgToolActionLink {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #F9572A;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+  cursor: pointer;
+}
+
+.orgToolActionLink:hover {
+  gap: 10px;
+}
+
+/* ── USE WORK HUB ACROSS YOUR ORGANIZATION (5 AUDIENCE COLUMNS) ── */
+.teamAudienceSection {
+  margin-bottom: 90px;
+}
+
+.teamAudienceContainerCard {
+  background: #FFF9EE;
+  border: 1px solid #FDE8CD;
+  border-radius: 28px;
+  padding: 44px 36px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(249, 87, 42, 0.04);
+}
+
+.teamAudienceTag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #F9572A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.teamAudienceContainerCard h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 48px;
+}
+
+.teamAudienceGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.teamColItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.teamIconCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #FAD6C8;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.teamColItem:hover .teamIconCircle {
+  transform: translateY(-5px) scale(1.08);
+  background: #F9572A;
+  color: #FFFFFF;
+}
+
+.teamColItem h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 6px;
+}
+
+.teamColItem p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #64748B;
+}
+
+/* ── VIBRANT ORANGE CTA BANNER ── */
+.whCtaSection {
+  margin-bottom: 90px;
+}
+
+.whCtaBanner {
+  background: linear-gradient(135deg, #FF6B35 0%, #F9572A 100%);
+  border-radius: 28px;
+  padding: 44px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 16px 40px rgba(249, 87, 42, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.whCtaLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.dashPreviewBox {
+  width: 140px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  background: #FFFFFF;
+  padding: 10px;
+}
+
+.dashPreviewBox img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.whCtaText h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.whCtaText p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 580px;
+}
+
+.whCtaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+  width: 210px;
+}
+
+.whBtnReqDemo {
+  padding: 13px 26px;
+  background: #FFFFFF;
+  border: none;
+  color: #F9572A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.whBtnReqDemo:hover {
+  background: #FFFBF7;
+  transform: translateY(-2px);
+}
+
+.whBtnGoogleCta {
+  padding: 11px 20px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.whBtnGoogleCta:hover {
+  background: #F8FAFC;
+  transform: translateY(-2px);
+}
+
+.whBtnGoogleCta img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .whHeroSection {
+    grid-template-columns: 1fr 1fr;
+  }
+  .whHeroRight {
+    grid-column: span 2;
+  }
+  .whStatsBarContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .orgToolsGrid3x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teamAudienceGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .whHeroSection {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .whHeroLeft {
+    align-items: center;
+  }
+  .whHeroRight {
+    grid-column: span 1;
+  }
+  .whCtaBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 28px;
+  }
+  .whCtaLeft {
+    flex-direction: column;
+  }
+  .whCtaButtons {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .orgToolsGrid3x2,
+  .whStatsBarContainer,
+  .teamAudienceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Dark Theme Work Hub Overrides ─── */
+[data-theme="dark"] .workHubPage {
+  background: #06070D !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .whBadge {
+  background: rgba(249, 87, 42, 0.12);
+  color: #F9572A;
+  border-color: rgba(249, 87, 42, 0.3);
+}
+
+[data-theme="dark"] .whHeroLeft h1 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .whHeroLeft h1 span {
+  background: linear-gradient(135deg, #F9572A 0%, #FF7A45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .whHeroLeft p {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .whPillText h5 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .whPillText span {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .whPillIcon {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+[data-theme="dark"] .whHeroGraphicWrapper {
+  background: transparent !important;
+}
+
+[data-theme="dark"] .whHeroTeamImg {
+  mix-blend-mode: screen;
+  filter: contrast(1.08) brightness(1.05) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+  border-radius: 24px;
+  background: transparent !important;
+}
+
+[data-theme="dark"] .perfWidgetCard,
+[data-theme="dark"] .completionRateWidget {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .perfWidgetHeader h4,
+[data-theme="dark"] .completionRateWidget strong {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .donutLegendList li {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .whStatsBarContainer {
+  background: rgba(12, 15, 28, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .whStatIconCircle {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+[data-theme="dark"] .whStatText strong {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .whStatText span {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .orgToolsSection h2 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .orgToolCard {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .orgToolCard h3 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .orgToolCard p {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .orgToolIconCircle {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+[data-theme="dark"] .teamAudienceContainerCard {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .teamAudienceContainerCard h2,
+[data-theme="dark"] .teamColItem h4 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .teamColItem p {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .teamIconCircle {
+  background: rgba(249, 87, 42, 0.15);
+  border-color: rgba(249, 87, 42, 0.3);
+  color: #F9572A;
+}

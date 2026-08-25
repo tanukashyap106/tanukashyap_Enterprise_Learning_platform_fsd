@@ -1,0 +1,227 @@
+.testimonialsSection {
+  max-width: 1320px;
+  margin: 0 auto 100px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonialsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.testimonialsTag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #F9572A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.testimonialsTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #1E1B18;
+}
+
+.testimonialsTitle span {
+  color: #F9572A;
+}
+
+.carouselControls {
+  display: flex;
+  gap: 12px;
+}
+
+.controlBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #1E1B18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.controlBtn:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+  background: #FFF0EB;
+  transform: scale(1.08);
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.testimonialCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-6px);
+  border-color: #FAD6C8;
+  box-shadow: 0 14px 30px rgba(249, 87, 42, 0.08);
+}
+
+.quoteIcon {
+  font-size: 40px;
+  color: #F9572A;
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.testimonialCard:hover .quoteIcon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.reviewText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4A4A55;
+  margin-bottom: 20px;
+}
+
+.starsRow {
+  display: flex;
+  gap: 4px;
+  color: #FFB800;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.userProfileRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+/* ── MOVING HUMAN AVATAR ANIMATION ── */
+.testimonialAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #F9572A;
+  box-shadow: 0 4px 12px rgba(249, 87, 42, 0.2);
+  animation: avatarFloat 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.testimonialCard:nth-child(2) .testimonialAvatar {
+  animation-delay: 1.2s;
+}
+
+.testimonialCard:nth-child(3) .testimonialAvatar {
+  animation-delay: 2.4s;
+}
+
+@keyframes avatarFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+    box-shadow: 0 4px 12px rgba(249, 87, 42, 0.2);
+  }
+  100% {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(249, 87, 42, 0.35);
+  }
+}
+
+.userInfo h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1E1B18;
+}
+
+.userInfo span {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+@media (max-width: 1024px) {
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+  .testimonialsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* ─── Dark Theme Testimonials Overrides ─── */
+[data-theme="dark"] .testimonialsTitle {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .controlBtn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .controlBtn:hover {
+  background: rgba(249, 87, 42, 0.2);
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+[data-theme="dark"] .testimonialCard {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(249, 87, 42, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .testimonialCard:hover {
+  border-color: rgba(249, 87, 42, 0.5);
+  box-shadow: 0 14px 35px rgba(249, 87, 42, 0.2);
+}
+
+[data-theme="dark"] .quoteIcon {
+  color: #F9572A;
+}
+
+[data-theme="dark"] .reviewText {
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .starsRow {
+  color: #F9572A;
+}
+
+[data-theme="dark"] .userInfo h4 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .userInfo span {
+  color: #F9572A;
+}

@@ -1,0 +1,145 @@
+.journeySection {
+  max-width: 1320px;
+  margin: 0 auto 100px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.journeyContainerCard {
+  background: #FFFDF9;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 44px 40px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(249, 87, 42, 0.04);
+}
+
+.journeySection h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 48px;
+}
+
+.journeySection h2 span {
+  color: #F9572A;
+}
+
+.journeyStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.journeyStepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stepIconWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.stepIconCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #FFF0EB;
+  border: 2px solid #FAD6C8;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.1);
+  transition: all 0.3s ease;
+}
+
+.journeyStepItem:hover .stepIconCircle {
+  transform: translateY(-6px) scale(1.05);
+  background: #F9572A;
+  color: #FFFFFF;
+  border-color: #F9572A;
+  box-shadow: 0 10px 25px rgba(249, 87, 42, 0.25);
+}
+
+.stepNumberBadge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #F9572A;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.journeyStepItem h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 8px;
+}
+
+.journeyStepItem p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #64748B;
+  max-width: 220px;
+}
+
+/* Connecting Dashed Arrow Lines Between Steps */
+.stepConnector {
+  position: absolute;
+  top: 45px;
+  right: -30%;
+  width: 60%;
+  height: 2px;
+  border-top: 2px dashed #FAD6C8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.stepConnector::after {
+  content: '>';
+  position: absolute;
+  right: -2px;
+  top: -9px;
+  color: #FAD6C8;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .journeyStepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .stepConnector {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .journeyStepsGrid {
+    grid-template-columns: 1fr;
+  }
+}

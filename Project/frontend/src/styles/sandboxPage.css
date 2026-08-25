@@ -1,0 +1,915 @@
+.sandboxPage {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  padding-top: 120px;
+}
+
+.sandboxPageContainer {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── HERO SECTION ── */
+.sbHeroSection {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.sbHeroLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sbBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF0EB;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+  padding: 8px 18px;
+  border-radius: 99px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.sbHeroLeft h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1E1B18;
+  margin-bottom: 18px;
+  letter-spacing: -1.2px;
+}
+
+.sbHeroLeft h1 span {
+  color: #F9572A;
+  background: linear-gradient(135deg, #F9572A 0%, #FF7A45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.sbHeroLeft p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #5A5A66;
+  margin-bottom: 28px;
+  max-width: 540px;
+}
+
+.sbHeroButtons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.sbBtnPrimary {
+  padding: 13px 28px;
+  background: #F9572A;
+  border: 1px solid #F9572A;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(249, 87, 42, 0.3);
+}
+
+.sbBtnPrimary:hover {
+  background: #E0481D;
+  transform: translateY(-2px);
+}
+
+.sbBtnSecondary {
+  padding: 13px 26px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #1E1B18;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.sbBtnSecondary:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+  background: #FFF0EB;
+  transform: translateY(-2px);
+}
+
+.sbHeroMicroPills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.sbMicroPill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sbPillIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #FFF0EB;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sbPillText h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0;
+}
+
+.sbPillText span {
+  font-size: 10px;
+  color: #64748B;
+  display: block;
+}
+
+.sbHeroRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sbHeroGraphicWrapper {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.sbHeroLaptopImg {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 24px;
+  filter: drop-shadow(0 16px 36px rgba(249, 87, 42, 0.12));
+  animation: sbLaptopFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes sbLaptopFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* ── INTERACTIVE SANDBOX SUITE ── */
+.sandboxSuiteCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  margin-bottom: 90px;
+}
+
+.suiteHeader h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0 0 16px 0;
+}
+
+/* TECH STACK LANGUAGE SELECTOR BAR */
+.langPillsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #F3EBE1;
+}
+
+.langPillBtn {
+  background: #FFFDF9;
+  border: 1px solid #F3EBE1;
+  border-radius: 14px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.langPillBtn:hover {
+  border-color: #FAD6C8;
+  background: #FFF0EB;
+  color: #F9572A;
+}
+
+.langPillBtn.active {
+  background: #FFF0EB;
+  border-color: #F9572A;
+  color: #F9572A;
+  box-shadow: 0 4px 12px rgba(249, 87, 42, 0.12);
+}
+
+.langPillBtn .langIcon {
+  font-size: 16px;
+}
+
+/* TOP TOOLBAR INSIDE EDITOR */
+.editorToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px 16px 0 0;
+  padding: 10px 20px;
+}
+
+.tabLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fileTabActive {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 6px 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E1B18;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.themeToggleBtn {
+  background: transparent;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.editorActionsRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnToolbarSecondary {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btnToolbarSecondary:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+.btnRunCode {
+  padding: 8px 20px;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(249, 87, 42, 0.25);
+}
+
+.btnRunCode:hover {
+  background: #E0481D;
+  transform: translateY(-1px);
+}
+
+/* 3-PANE EDITOR MAIN CONTENT GRID */
+.editorMainGrid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  border: 1px solid #E2E8F0;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+/* LEFT FILE TREE PANE */
+.fileTreePane {
+  background: #F8FAFC;
+  border-right: 1px solid #E2E8F0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filesPaneTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: #94A3B8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fileItem {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+
+.fileItem.active {
+  background: #FFF0EB;
+  color: #F9572A;
+  font-weight: 800;
+}
+
+.fileItem:hover {
+  background: #F1F5F9;
+}
+
+.filePaneFooterIcons {
+  display: flex;
+  gap: 12px;
+  color: #94A3B8;
+  font-size: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #E2E8F0;
+}
+
+.filePaneFooterIcons span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.filePaneFooterIcons span:hover {
+  color: #F9572A;
+}
+
+/* CENTER CODE TEXTAREA PANE */
+.codeEditorPane {
+  background: #0F172A;
+  padding: 16px;
+  position: relative;
+  display: flex;
+}
+
+.lineNumbersCol {
+  width: 32px;
+  color: #475569;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  user-select: none;
+  text-align: right;
+  padding-right: 12px;
+}
+
+.codeTextarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #38BDF8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  resize: none;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.sandboxPage.lightMode .codeTextarea {
+  color: #1E293B;
+}
+
+/* RIGHT OUTPUT TERMINAL PANE */
+.terminalOutputPane {
+  background: #FFFFFF;
+  border-left: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+}
+
+.outputHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #E2E8F0;
+  background: #F8FAFC;
+}
+
+.outputHeaderTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btnClearConsole {
+  background: transparent;
+  border: 1px solid #CBD5E1;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btnClearConsole:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+.outputConsoleBody {
+  flex: 1;
+  padding: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #1E293B;
+  overflow-y: auto;
+}
+
+.executionStatusSuccess {
+  margin-top: 16px;
+  padding: 6px 12px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 8px;
+  color: #16A34A;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── WHY USE SKILLSPHERE SANDBOX (6 CARDS - 3x2) ── */
+.whySandboxSection {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.whyTag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #F9572A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.whySandboxSection h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 12px;
+}
+
+.whyGrid3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.whyCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whyCard:hover {
+  transform: translateY(-5px);
+  border-color: #FAD6C8;
+  box-shadow: 0 14px 30px rgba(249, 87, 42, 0.08);
+}
+
+.whyIconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #FFF0EB;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.whyCard h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 10px;
+}
+
+.whyCard p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64748B;
+}
+
+/* ── READY TO BUILD BANNER ── */
+.buildCtaSection {
+  margin-bottom: 90px;
+}
+
+.buildCtaBanner {
+  background: #FFF9EE;
+  border: 1px solid #FDE8CD;
+  border-radius: 28px;
+  padding: 44px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 8px 30px rgba(249, 87, 42, 0.04);
+}
+
+.buildCtaLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.buildRocketIcon {
+  font-size: 64px;
+  flex-shrink: 0;
+  animation: buildRocket 4s ease-in-out infinite alternate;
+}
+
+@keyframes buildRocket {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-8px) rotate(-4deg); }
+}
+
+.buildCtaText h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 8px;
+}
+
+.buildCtaText p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #64748B;
+}
+
+.buildCtaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.socialProofDevs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.devAvatarsStack {
+  display: flex;
+}
+
+.devAvatarsStack img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  margin-left: -8px;
+}
+
+.devAvatarsStack img:first-child {
+  margin-left: 0;
+}
+
+.devSocialText {
+  font-size: 11px;
+  color: #64748B;
+  line-height: 1.3;
+  max-width: 200px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .editorMainGrid {
+    grid-template-columns: 1fr;
+  }
+  .whyGrid3x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sbHeroMicroPills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .sbHeroSection {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .sbHeroLeft {
+    align-items: center;
+  }
+  .buildCtaBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 28px;
+  }
+  .buildCtaLeft {
+    flex-direction: column;
+  }
+  .buildCtaRight {
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .whyGrid3x2,
+  .sbHeroMicroPills {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Dark Theme Sandbox Overrides ─── */
+[data-theme="dark"] .sandboxPage {
+  background: #06070D !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .sbBadge {
+  background: rgba(249, 87, 42, 0.12);
+  color: #F9572A;
+  border-color: rgba(249, 87, 42, 0.3);
+}
+
+[data-theme="dark"] .sbHeroLeft h1 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .sbHeroLeft h1 span {
+  background: linear-gradient(135deg, #F9572A 0%, #FF7A45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="dark"] .sbHeroLeft p {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .sbPillText h5 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .sbPillText span {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .sbPillIcon {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+[data-theme="dark"] .sbHeroGraphicWrapper {
+  background: transparent !important;
+}
+
+[data-theme="dark"] .sbHeroLaptopImg {
+  mix-blend-mode: screen;
+  filter: contrast(1.08) brightness(1.05) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+  border-radius: 24px;
+  background: transparent !important;
+}
+
+[data-theme="dark"] .sandboxSuiteCard {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .suiteHeader h3 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .langPillsBar {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .langPillBtn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .langPillBtn:hover {
+  background: rgba(249, 87, 42, 0.15);
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+[data-theme="dark"] .langPillBtn.active {
+  background: rgba(249, 87, 42, 0.2);
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+[data-theme="dark"] .editorToolbar {
+  background: rgba(10, 14, 30, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .fileTabActive {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .btnToolbarSecondary {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .btnToolbarSecondary:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+[data-theme="dark"] .editorMainGrid {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .fileTreePane {
+  background: rgba(10, 14, 30, 0.95);
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .fileItem {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .fileItem.active {
+  background: rgba(249, 87, 42, 0.2);
+  color: #F9572A;
+}
+
+[data-theme="dark"] .terminalOutputPane {
+  background: rgba(10, 14, 30, 0.95);
+  border-left-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .outputHeader {
+  background: rgba(15, 20, 40, 0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .outputConsoleBody {
+  color: #E2E8F0;
+}
+
+[data-theme="dark"] .whySandboxSection h2 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .whyCard {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .whyCard h3 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .whyCard p {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .whyIconCircle {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+[data-theme="dark"] .buildCtaBanner {
+  background: rgba(13, 16, 30, 0.85);
+  border: 1px solid rgba(249, 87, 42, 0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .buildCtaText h2 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .buildCtaText p {
+  color: #94A3B8;
+}

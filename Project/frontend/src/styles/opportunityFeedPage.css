@@ -1,0 +1,1238 @@
+/* Dedicated Opportunity Feed & Job Search Portal Stylesheet - SkillSphere Theme (1-to-1 Match) */
+.ofpWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.ofpMainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+.ofpRightBodyArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* Toast Notification */
+.ofpToastNotification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
+/* Modals */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modalContainer {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme .modalContainer {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modalHeader h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.modalCloseBtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.appliedList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appliedItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.dark-theme .appliedItem {
+  background: #0f172a;
+}
+
+.appliedItem strong {
+  display: block;
+  font-size: 13px;
+}
+
+.appliedItem .appDate {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.appliedItem .appStatus {
+  background: #ffedd5;
+  color: #c2410c;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.howItWorksSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepCard {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.stepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ea580c;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepCard h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.stepCard p {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ==========================================================================
+   JOB SEARCH PORTAL STYLESHEET (1-TO-1 MATCH TO REFERENCE MOCKUP IMAGE)
+   ========================================================================== */
+
+/* Main Header Row */
+.jspHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.jspTitleBadgeArea {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.jspIconNodeBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.15);
+}
+
+.dark-theme .jspIconNodeBadge {
+  background: rgba(234, 88, 12, 0.18);
+  color: #fb923c;
+}
+
+.jspMainTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.dark-theme .jspMainTitle {
+  color: #ffffff;
+}
+
+.jspSubTitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 4px 0 0 0;
+}
+
+.dark-theme .jspSubTitle {
+  color: #94a3b8;
+}
+
+.jspHowItWorksBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.dark-theme .jspHowItWorksBtn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+/* Multi-Filter Section Bar */
+.jspFilterSection {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.dark-theme .jspFilterSection {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.jspSearchInputRow {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.jspSearchInputRow input {
+  width: 100%;
+  padding: 14px 20px 14px 44px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.dark-theme .jspSearchInputRow input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #ffffff;
+}
+
+.jspSearchInputRow .searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.jspFiltersGrid {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.jspFilterItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 130px;
+}
+
+.jspFilterItem label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dark-theme .jspFilterItem label {
+  color: #94a3b8;
+}
+
+.jspFilterItem select {
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #0f172a;
+  outline: none;
+  cursor: pointer;
+}
+
+.dark-theme .jspFilterItem select {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.jspClearFiltersLink {
+  background: none;
+  border: none;
+  color: #ea580c;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 8px;
+  white-space: nowrap;
+}
+
+/* 2-Column Main Workspace Layout - Single Page Visibility Guarantee */
+.jspMainGridContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .jspMainGridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jspLeftContentCol {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Platform Section (LinkedIn, Naukri, Glassdoor) */
+.jspPlatformSection {
+  background: transparent;
+}
+
+.jspSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.jspPlatformTitleBadge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.jspPlatformTitleBadge h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.dark-theme .jspPlatformTitleBadge h2 {
+  color: #ffffff;
+}
+
+.jspLinkedinLogoBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #0077b5;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jspNaukriLogoBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #00b4d8;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jspGlassdoorLogoBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #00a862;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jspViewAllLink {
+  background: none;
+  border: none;
+  color: #ea580c;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Horizontal Cards Carousel / Row */
+.jspHorizontalCardsRow {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 8px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.jspHorizontalCardsRow::-webkit-scrollbar {
+  height: 6px;
+}
+
+.jspHorizontalCardsRow::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 99px;
+}
+
+/* Base Job Card */
+.jspJobCard {
+  width: 230px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jspJobCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dark-theme .jspJobCard {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.jspCardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.jspCompanyLogoBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.jspEasyApplyBadge {
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.jspJobRoleTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.dark-theme .jspJobRoleTitle {
+  color: #ffffff;
+}
+
+.jspJobCompanySub {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.jspJobRoleSub {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.jspJobLocText {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.jspJobSalaryText {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 8px;
+}
+
+.dark-theme .jspJobSalaryText {
+  color: #ffffff;
+}
+
+.jspSkillTagsPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.jspSkillPill {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.dark-theme .jspSkillPill {
+  background: #334155;
+  color: #cbd5e1;
+}
+
+.jspCardBottomRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.jspPostedDate {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.jspApplyBtn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.jspApplyBtn.linkedinBtn {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+  color: #ffffff;
+}
+
+.jspApplyBtn.linkedinBtn .inIcon {
+  background: #ffffff;
+  color: #ea580c;
+  font-weight: 900;
+  font-size: 10px;
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+.jspNaukriDetailsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  color: #64748b;
+  margin: 8px 0 12px 0;
+}
+
+.jspApplyBtn.naukriOutlineBtn, .jspApplyBtn.glassdoorOutlineBtn {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #ea580c;
+}
+
+.dark-theme .jspApplyBtn.naukriOutlineBtn, .dark-theme .jspApplyBtn.glassdoorOutlineBtn {
+  border-color: #334155;
+  color: #fb923c;
+}
+
+.jspGlassdoorRatingRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.jspGlassdoorRatingRow .ratingBadge {
+  background: #fef08a;
+  color: #854d0e;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.jspGlassdoorRatingRow .reviewsText {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.jspDiffBadgeRow {
+  margin: 8px 0 12px 0;
+}
+
+.diffBadge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.diffBadge.medium { background: #ffedd5; color: #c2410c; }
+.diffBadge.easy { background: #d1fae5; color: #047857; }
+
+/* Bottom Grid Row: Application Tracker + Resume Score */
+.jspBottomGridRow {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 20px;
+}
+
+@media (max-width: 850px) {
+  .jspBottomGridRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jspTrackerCard, .jspResumeScoreCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.dark-theme .jspTrackerCard, .dark-theme .jspResumeScoreCard {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.jspTrackerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.jspTrackerHeader h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.dark-theme .jspTrackerHeader h3 {
+  color: #ffffff;
+}
+
+.jspViewApplicationsBtn {
+  background: none;
+  border: none;
+  color: #ea580c;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Stepper Pipeline */
+.jspStepperPipeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.jspStepNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.jspNodeCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.jspNodeCircle.green { background: #10b981; }
+.jspNodeCircle.blue { background: #3b82f6; }
+.jspNodeCircle.yellow { background: #f59e0b; }
+.jspNodeCircle.purple { background: #8b5cf6; }
+.jspNodeCircle.pink { background: #ec4899; }
+.jspNodeCircle.offer { background: #10b981; }
+
+.jspStepNode .nodeTitle {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.jspStepNode .nodeVal {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 2px;
+}
+
+.dark-theme .jspStepNode .nodeVal {
+  color: #ffffff;
+}
+
+.jspStepLine {
+  flex: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 4px;
+  margin-top: -24px;
+  z-index: 1;
+}
+
+.dark-theme .jspStepLine {
+  background: #334155;
+}
+
+/* Resume Score Card */
+.jspResumeScoreCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.jspResumeDonutWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.jspDonutSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.jspDonutSvg .bgCircle {
+  fill: none;
+  stroke: #f1f5f9;
+  stroke-width: 6;
+}
+
+.dark-theme .jspDonutSvg .bgCircle {
+  stroke: #334155;
+}
+
+.jspDonutSvg .fillCircle {
+  fill: none;
+  stroke: #10b981;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.donutValText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dark-theme .donutValText {
+  color: #ffffff;
+}
+
+.jspResumeScoreInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreLabel.green {
+  font-size: 14px;
+  font-weight: 800;
+  color: #10b981;
+}
+
+.scoreSub {
+  font-size: 11px;
+  color: #64748b;
+  margin: 2px 0 10px 0;
+}
+
+.jspImproveResumeBtn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.dark-theme .jspImproveResumeBtn {
+  background: #0f172a;
+  border-color: #334155;
+  color: #ffffff;
+}
+
+/* RIGHT SIDEBAR WIDGETS */
+.jspRightSidebarCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.jspWidgetCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.dark-theme .jspWidgetCard {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.jspWidgetTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-theme .jspWidgetTitle {
+  color: #ffffff;
+}
+
+.jspWidgetHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.jspWidgetHeaderRow .jspWidgetTitle {
+  margin: 0;
+}
+
+.jspWidgetLinkBtn {
+  background: none;
+  border: none;
+  color: #ea580c;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Job Summary */
+.jspSummaryList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.dark-theme .summaryItem {
+  background: #0f172a;
+}
+
+.summaryItem .iconBox {
+  font-size: 18px;
+}
+
+.summaryInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryInfo .val {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dark-theme .summaryInfo .val {
+  color: #ffffff;
+}
+
+.summaryInfo .lbl {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* AI Job Match */
+.jspAiMatchRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.jspAiDonutWrapper {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.jspAiDonutSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.jspAiDonutSvg .bgCircle {
+  fill: none;
+  stroke: #f1f5f9;
+  stroke-width: 6;
+}
+
+.dark-theme .jspAiDonutSvg .bgCircle {
+  stroke: #334155;
+}
+
+.jspAiDonutSvg .fillCircle {
+  fill: none;
+  stroke: #10b981;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.aiValText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dark-theme .aiValText {
+  color: #ffffff;
+}
+
+.jspAiMatchInfo .matchHeading {
+  font-size: 14px;
+  font-weight: 800;
+  color: #10b981;
+  display: block;
+}
+
+.jspAiMatchInfo .matchSub {
+  font-size: 11px;
+  color: #64748b;
+  margin: 2px 0 0 0;
+}
+
+.jspMatchingSkillsBlock .skillsLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.jspMatchingChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skillChip {
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.dark-theme .skillChip {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+/* Saved Jobs */
+.jspSavedJobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.savedJobItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.dark-theme .savedJobItem {
+  background: #0f172a;
+}
+
+.savedJobItem .sLogo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.savedJobItem .sInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.savedJobItem .sInfo .title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dark-theme .savedJobItem .sInfo .title {
+  color: #ffffff;
+}
+
+.savedJobItem .sInfo .comp {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.removeSaveBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Deadlines */
+.jspDeadlinesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.deadlineItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.deadlineItem .dIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.deadlineItem .dInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.deadlineItem .dInfo .title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dark-theme .deadlineItem .dInfo .title {
+  color: #ffffff;
+}
+
+.deadlineItem .dInfo .timeRed {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ef4444;
+}
+
+/* Need Referrals Dark Community Banner */
+.jspReferralsDarkBanner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  border-radius: 20px;
+  padding: 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(49, 46, 129, 0.25);
+}
+
+.bannerTextCol h3 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+}
+
+.bannerTextCol p {
+  font-size: 12px;
+  color: #c7d2fe;
+  margin: 0 0 14px 0;
+  line-height: 1.4;
+}
+
+.jspJoinCommunityBtn {
+  background: #ea580c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.jspJoinCommunityBtn:hover {
+  transform: translateY(-2px);
+}
+
+.bannerAvatarsGraphic {
+  font-size: 36px;
+}

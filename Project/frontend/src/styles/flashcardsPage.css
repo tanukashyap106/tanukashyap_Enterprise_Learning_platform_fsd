@@ -1,0 +1,1227 @@
+/* Flashcards Page Stylesheet - SkillSphere Theme (Light & Dark Theme) */
+
+/* ── Light Theme Base ── */
+.fcpWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.fcpMainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* ── Toast Alert ── */
+.fcpToastAlert {
+  background: #1E1B18;
+  color: #FFFFFF;
+  border-left: 4px solid #F9572A;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideInToast 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInToast {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── LEFT SIDEBAR ── */
+.fcpLeftSidebar {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.fcpLeftSidebar::-webkit-scrollbar { display: none; }
+.fcpLeftSidebar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.fcpSidebarHomeArchHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px 14px 12px;
+  margin-bottom: 8px;
+}
+
+.fcpArchLine {
+  position: absolute;
+  top: -8px;
+  left: 36px;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed #FAD6C8;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 30px 0 0 0;
+  pointer-events: none;
+}
+
+.fcpHomeCircularBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.35);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.fcpHomeCircularBtn:hover {
+  transform: scale(1.05);
+}
+
+.fcpSidebarLevelWidget {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fcpLevelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fcpLevelBadge {
+  font-size: 11px;
+  font-weight: 800;
+  color: #F9572A;
+  background: #FFF0EB;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.fcpXpText {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.fcpXpProgressTrack {
+  height: 6px;
+  background: #E2E8F0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.fcpXpProgressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #F9572A, #FF8A00);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.fcpNavMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fcpNavItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  color: #64748B;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.fcpNavItem:hover {
+  background: #FFF0EB;
+  color: #F9572A;
+}
+
+.fcpNavItem.active {
+  background: #F9572A;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.3);
+}
+
+.fcpNavIcon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.fcpBadgeNew {
+  font-size: 9px;
+  font-weight: 800;
+  background: #EF4444;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 99px;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.fcpSidebarProWidget {
+  margin-top: auto;
+  background: linear-gradient(135deg, #1E1B18, #322C27);
+  border-radius: 20px;
+  padding: 16px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fcpProBadge {
+  font-size: 10px;
+  font-weight: 800;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fcpSidebarProWidget h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fcpSidebarProWidget p {
+  margin: 0;
+  font-size: 11px;
+  color: #94A3B8;
+  line-height: 1.4;
+}
+
+.fcpBtnUpgradePro {
+  background: #F9572A;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.fcpBtnUpgradePro:hover { opacity: 0.9; }
+
+/* ── RIGHT MAIN CONTENT ── */
+.fcpMainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* ── TOP BAR ── */
+.fcpTopHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.fcpSearchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 16px;
+  padding: 8px 16px;
+  flex: 1;
+  max-width: 480px;
+}
+
+.fcpSearchWrapper input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  color: inherit;
+  font-family: inherit;
+}
+
+.fcpTopHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fcpThemeToggleBtn,
+.fcpIconHeaderBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.fcpThemeToggleBtn:hover,
+.fcpIconHeaderBtn:hover {
+  background: #FFF0EB;
+  color: #F9572A;
+  border-color: #FAD6C8;
+}
+
+.fcpXpBadgePill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFF0EB;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+  padding: 8px 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.fcpUserProfilePill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 12px 4px 4px;
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 99px;
+}
+
+.fcpUserAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F9572A;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.fcpUserInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.fcpUserName {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.fcpUserRole {
+  font-size: 10px;
+  color: #64748B;
+}
+
+/* ── HERO BANNER ── */
+.fcpHeroBanner {
+  background: linear-gradient(135deg, #F9572A, #FF7A45);
+  border-radius: 28px;
+  padding: 32px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(249, 87, 42, 0.25);
+}
+
+.fcpHeroContent h1 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fcpHeroContent p {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  opacity: 0.95;
+  max-width: 540px;
+  line-height: 1.5;
+}
+
+.fcpHeroActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fcpBtnPrimaryHero {
+  background: #FFFFFF;
+  color: #F9572A;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.fcpBtnPrimaryHero:hover {
+  transform: translateY(-2px);
+  background: #FFFBF7;
+}
+
+.fcpBtnSecondaryHero {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease;
+}
+
+.fcpBtnSecondaryHero:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.fcpHeroDecoGraphic {
+  font-size: 110px;
+  opacity: 0.18;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  pointer-events: none;
+  transform: rotate(-15deg);
+}
+
+/* ── METRICS ROW ── */
+.fcpMetricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.fcpMetricCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.fcpMetricIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.fcpMetricIcon.orange { background: #FFF0EB; color: #F9572A; }
+.fcpMetricIcon.purple { background: #F3E8FF; color: #9333EA; }
+.fcpMetricIcon.green  { background: #DCFCE7; color: #16A34A; }
+.fcpMetricIcon.cyan   { background: #E0F2FE; color: #0284C7; }
+
+.fcpMetricMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.fcpMetricMeta label {
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fcpMetricMeta strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: inherit;
+}
+
+/* ── CATEGORY FILTER TABS ── */
+.fcpFilterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fcpCategoryTabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.fcpCategoryTabs::-webkit-scrollbar { display: none; }
+
+.fcpTabBtn {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  color: #64748B;
+  padding: 10px 18px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.fcpTabBtn:hover {
+  border-color: #FAD6C8;
+  color: #F9572A;
+}
+
+.fcpTabBtn.active {
+  background: #F9572A;
+  color: #FFFFFF;
+  border-color: #F9572A;
+  box-shadow: 0 4px 12px rgba(249, 87, 42, 0.25);
+}
+
+.fcpViewToggleGroup {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 12px;
+  padding: 3px;
+}
+
+.fcpViewBtn {
+  background: transparent;
+  border: none;
+  color: #64748B;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.fcpViewBtn.active {
+  background: #FFF0EB;
+  color: #F9572A;
+}
+
+/* ── DECKS GRID ── */
+.fcpDecksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.fcpDeckCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25 ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.fcpDeckCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.fcpDeckHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fcpDeckTopicTag {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.fcpDeckTopicTag.frontend { background: #E0F2FE; color: #0284C7; }
+.fcpDeckTopicTag.dsa      { background: #F3E8FF; color: #9333EA; }
+.fcpDeckTopicTag.system   { background: #FEF3C7; color: #D97706; }
+.fcpDeckTopicTag.backend  { background: #DCFCE7; color: #16A34A; }
+.fcpDeckTopicTag.ai       { background: #FFE4E6; color: #E11D48; }
+
+.fcpDeckCardsBadge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+  background: #FAF8F5;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.fcpDeckBody h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.fcpDeckBody p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748B;
+  line-height: 1.4;
+
+  /* Line clamp 2 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fcpMasterySection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fcpMasteryHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.fcpMasteryTrack {
+  height: 8px;
+  background: #FAF8F5;
+  border-radius: 99px;
+  overflow: hidden;
+  border: 1px solid #F3EBE1;
+}
+
+.fcpMasteryFill {
+  height: 100%;
+  background: linear-gradient(90deg, #F9572A, #10B981);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+.fcpDeckFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #F3EBE1;
+}
+
+.fcpLastRev {
+  font-size: 11px;
+  color: #94A3B8;
+}
+
+.fcpBtnStudyDeck {
+  background: #F9572A;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(249, 87, 42, 0.25);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fcpBtnStudyDeck:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* ── INTERACTIVE 3D STUDY MODE ── */
+.fcpStudySection {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+}
+
+.fcpStudyHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fcpBtnBackToDecks {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  color: #64748B;
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fcpBtnBackToDecks:hover {
+  color: #F9572A;
+  background: #FFF0EB;
+}
+
+.fcpStudyTitle {
+  text-align: center;
+}
+
+.fcpStudyTitle h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.fcpStudyTitle span {
+  font-size: 12px;
+  color: #64748B;
+}
+
+/* 3D Flip Card Container */
+.fcpCardStage {
+  width: 100%;
+  max-width: 640px;
+  height: 380px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.fcpFlipCardInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 24px;
+}
+
+.fcpFlipCardInner.isFlipped {
+  transform: rotateY(180deg);
+}
+
+.fcpCardFront,
+.fcpCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.fcpCardFront {
+  background: linear-gradient(145deg, #FFFFFF, #FAF8F5);
+  border: 2px solid #F3EBE1;
+  color: #1E1B18;
+}
+
+.fcpCardBack {
+  background: linear-gradient(145deg, #FFF0EB, #FFFFFF);
+  border: 2px solid #FAD6C8;
+  color: #1E1B18;
+  transform: rotateY(180deg);
+}
+
+.fcpCardTopMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fcpCardBadgeSide {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 99px;
+}
+
+.fcpCardFront .fcpCardBadgeSide { background: #FAF8F5; color: #64748B; border: 1px solid #E2E8F0; }
+.fcpCardBack  .fcpCardBadgeSide { background: #FFF0EB; color: #F9572A; border: 1px solid #FAD6C8; }
+
+.fcpCardDiffTag {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+.fcpCardDiffTag.easy   { background: #DCFCE7; color: #16A34A; }
+.fcpCardDiffTag.medium { background: #FEF3C7; color: #D97706; }
+.fcpCardDiffTag.hard   { background: #FFE4E6; color: #E11D48; }
+
+.fcpCardMainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  margin: 16px 0;
+  overflow-y: auto;
+}
+
+.fcpQuestionText {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.fcpAnswerText {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.fcpCodeBlockSnippet {
+  background: #0F172A;
+  color: #38BDF8;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
+  margin-top: 12px;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fcpCardFlipPrompt {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Study Control Buttons & Self-Rating */
+.fcpStudyControls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.fcpNavButtonsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fcpBtnNavControl {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  color: #64748B;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.fcpBtnNavControl:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.fcpBtnNavControl:not(:disabled):hover {
+  background: #FFF0EB;
+  color: #F9572A;
+  border-color: #FAD6C8;
+}
+
+.fcpBtnFlipAction {
+  background: #F9572A;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.3);
+}
+
+.fcpSelfRatingBox {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.fcpBtnRate {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fcpBtnRate:hover { transform: translateY(-2px); }
+
+.fcpBtnRate.again { background: #FFE4E6; color: #E11D48; }
+.fcpBtnRate.good  { background: #FEF3C7; color: #D97706; }
+.fcpBtnRate.easy  { background: #DCFCE7; color: #16A34A; }
+
+.fcpBtnRate span { font-size: 10px; font-weight: 600; opacity: 0.85; }
+
+/* ── MODALS (AI GENERATOR & CREATE DECK) ── */
+.fcpModalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.fcpModalBox {
+  background: #FFFFFF;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: modalScale 0.25s ease-out;
+}
+
+@keyframes modalScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fcpModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fcpModalHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fcpBtnCloseModal {
+  background: #FAF8F5;
+  border: 1px solid #E2E8F0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748B;
+}
+
+.fcpModalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fcpFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fcpFormGroup label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.fcpFormGroup input,
+.fcpFormGroup select,
+.fcpFormGroup textarea {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+.fcpFormGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.fcpFormGroup input:focus,
+.fcpFormGroup select:focus,
+.fcpFormGroup textarea:focus {
+  border-color: #F9572A;
+}
+
+.fcpBtnSubmitForm {
+  background: #F9572A;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.3);
+}
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 1100px) {
+  .fcpLeftSidebar { display: none; }
+  .fcpMetricsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .fcpMetricsGrid { grid-template-columns: 1fr; }
+  .fcpTopHeader { flex-direction: column; align-items: stretch; }
+  .fcpCardStage { height: 320px; }
+  .fcpQuestionText { font-size: 16px; }
+  .fcpAnswerText { font-size: 14px; }
+}
+
+/* ───────────────────────────────────────────────────────────────────────── */
+/* ── DARK THEME OVERRIDES (.dark-theme & [data-theme="dark"]) ────────── */
+/* ───────────────────────────────────────────────────────────────────────── */
+
+.fcpWrapper.dark-theme,
+[data-theme="dark"] .fcpWrapper {
+  background: #0F172A;
+  color: #F8FAFC;
+}
+
+.fcpWrapper.dark-theme .fcpLeftSidebar,
+.fcpWrapper.dark-theme .fcpTopHeader,
+.fcpWrapper.dark-theme .fcpMetricCard,
+.fcpWrapper.dark-theme .fcpDeckCard,
+.fcpWrapper.dark-theme .fcpStudySection,
+.fcpWrapper.dark-theme .fcpModalBox,
+.fcpWrapper.dark-theme .fcpTabBtn,
+.fcpWrapper.dark-theme .fcpViewToggleGroup {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.fcpWrapper.dark-theme .fcpSidebarLevelWidget,
+.fcpWrapper.dark-theme .fcpSearchWrapper,
+.fcpWrapper.dark-theme .fcpThemeToggleBtn,
+.fcpWrapper.dark-theme .fcpIconHeaderBtn,
+.fcpWrapper.dark-theme .fcpUserProfilePill,
+.fcpWrapper.dark-theme .fcpBtnBackToDecks,
+.fcpWrapper.dark-theme .fcpBtnNavControl,
+.fcpWrapper.dark-theme .fcpDeckCardsBadge,
+.fcpWrapper.dark-theme .fcpMasteryTrack,
+.fcpWrapper.dark-theme .fcpBtnCloseModal,
+.fcpWrapper.dark-theme .fcpFormGroup input,
+.fcpWrapper.dark-theme .fcpFormGroup select,
+.fcpWrapper.dark-theme .fcpFormGroup textarea {
+  background: #0F172A;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+.fcpWrapper.dark-theme .fcpCardFront {
+  background: linear-gradient(145deg, #1E293B, #0F172A);
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+.fcpWrapper.dark-theme .fcpCardBack {
+  background: linear-gradient(145deg, #2D1A16, #1E293B);
+  border-color: #F9572A;
+  color: #F8FAFC;
+}
+
+.fcpWrapper.dark-theme .fcpCardFront .fcpCardBadgeSide {
+  background: #0F172A;
+  color: #94A3B8;
+  border-color: #334155;
+}
+
+.fcpWrapper.dark-theme .fcpDeckBody p,
+.fcpWrapper.dark-theme .fcpMetricMeta label,
+.fcpWrapper.dark-theme .fcpLastRev,
+.fcpWrapper.dark-theme .fcpUserRole,
+.fcpWrapper.dark-theme .fcpStudyTitle span,
+.fcpWrapper.dark-theme .fcpAnswerText,
+.fcpWrapper.dark-theme .fcpFormGroup label {
+  color: #94A3B8;
+}
+
+.fcpWrapper.dark-theme .fcpNavItem {
+  color: #94A3B8;
+}
+
+.fcpWrapper.dark-theme .fcpNavItem:hover {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+.fcpWrapper.dark-theme .fcpNavItem.active {
+  background: #F9572A;
+  color: #FFFFFF;
+}
+
+.fcpWrapper.dark-theme .fcpDeckFooter {
+  border-top-color: #334155;
+}
+
+.fcpWrapper.dark-theme .fcpBtnRate.again { background: rgba(225, 29, 72, 0.2); color: #FCA5A5; }
+.fcpWrapper.dark-theme .fcpBtnRate.good  { background: rgba(217, 119, 6, 0.2); color: #FDE68A; }
+.fcpWrapper.dark-theme .fcpBtnRate.easy  { background: rgba(22, 163, 74, 0.2); color: #86EFAC; }

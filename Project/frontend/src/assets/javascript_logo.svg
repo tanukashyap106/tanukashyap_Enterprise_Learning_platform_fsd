@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jsShieldLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2B714" />
+      <stop offset="100%" stop-color="#D4A70D" />
+    </linearGradient>
+    <linearGradient id="jsShieldRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CFA109" />
+      <stop offset="100%" stop-color="#B88E04" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Half Shield -->
+  <path d="M 75 35 L 200 35 L 200 270 L 160 256 L 75 220 Z" fill="url(#jsShieldLeft)" />
+  
+  <!-- Right Half Shield -->
+  <path d="M 200 35 L 325 35 L 325 220 L 240 256 L 200 270 Z" fill="url(#jsShieldRight)" />
+
+  <!-- Outer Shield Path for Clean Outline/Shape -->
+  <path d="M 75 35 L 325 35 L 325 220 L 200 270 L 75 220 Z" fill="none" stroke="#D4A70D" stroke-width="2" />
+
+  <!-- 'J' Letter -->
+  <path d="M 115 80 L 180 80 L 180 185 L 140 185 L 140 108 L 115 108 Z" fill="#F8FAFC" />
+  <path d="M 115 150 L 140 150 L 140 185 L 115 185 Z" fill="#F8FAFC" />
+
+  <!-- 'S' Letter -->
+  <path d="M 205 80 L 285 80 L 285 108 L 233 108 L 233 125 L 285 135 L 285 185 L 205 185 L 205 157 L 257 157 L 257 145 L 205 133 Z" fill="#FFFFFF" />
+
+  <!-- 'JavaScript' Text -->
+  <text x="200" y="340" text-anchor="middle" font-family="'Times New Roman', Times, serif, 'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="600" fill="#1E293B" letter-spacing="1">JavaScript</text>
+</svg>

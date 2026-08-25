@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="badgeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2B714" />
+      <stop offset="100%" stop-color="#D4A70D" />
+    </linearGradient>
+    <linearGradient id="badgeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CFA109" />
+      <stop offset="100%" stop-color="#B88E04" />
+    </linearGradient>
+  </defs>
+
+  <!-- Left Half Shield -->
+  <path d="M 25 15 L 150 15 L 150 270 L 105 254 L 25 215 Z" fill="url(#badgeLeft)" />
+  
+  <!-- Right Half Shield -->
+  <path d="M 150 15 L 275 15 L 275 215 L 195 254 L 150 270 Z" fill="url(#badgeRight)" />
+
+  <!-- 'J' Letter -->
+  <path d="M 60 65 L 130 65 L 130 180 L 85 180 L 85 96 L 60 96 Z" fill="#F8FAFC" />
+  <path d="M 60 140 L 85 140 L 85 180 L 60 180 Z" fill="#F8FAFC" />
+
+  <!-- 'S' Letter -->
+  <path d="M 155 65 L 240 65 L 240 96 L 185 96 L 185 115 L 240 126 L 240 180 L 155 180 L 155 148 L 210 148 L 210 135 L 155 122 Z" fill="#FFFFFF" />
+</svg>

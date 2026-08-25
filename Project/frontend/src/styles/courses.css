@@ -1,0 +1,1444 @@
+/* My Courses Page & Course Checkout Modal Stylesheet - SkillSphere Theme */
+.mcCoursesWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mcMainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* ── LEFT SIDEBAR ── */
+.mcLeftSidebar {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.mcLeftSidebar::-webkit-scrollbar {
+  display: none;
+}
+.mcLeftSidebar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mcSidebarHomeArchHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px 14px 12px;
+  margin-bottom: 8px;
+}
+
+.mcArchLine {
+  position: absolute;
+  top: -8px;
+  left: 36px;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed #FAD6C8;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 30px 0 0 0;
+  pointer-events: none;
+}
+
+.mcHomeCircularBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.35);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+/* ── RIGHT MAIN BODY LAYOUT ── */
+.mcRightBodyArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mcPageHeader h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+}
+
+.mcPageHeader p {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+}
+
+/* 2-COLUMN MAIN CONTENT GRID */
+.mcGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  gap: 24px;
+}
+
+/* FILTER PILLS & SORT ROW */
+.mcFilterSortRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mcFilterPills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mcPill {
+  padding: 8px 18px;
+  border-radius: 99px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mcPill:hover {
+  background: #FFF8F3;
+  color: #F9572A;
+}
+
+.mcPill.active {
+  background: #F9572A;
+  color: #FFFFFF;
+  border-color: #F9572A;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.25);
+}
+
+.mcSortSelectWrapper {
+  position: relative;
+}
+
+.mcSortSelect {
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 99px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 8 COURSE CARDS GRID */
+.mcCourseGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.mcCourseCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.mcCourseCard:hover {
+  transform: translateY(-4px);
+  border-color: #FAD6C8;
+}
+
+.mcBannerBox {
+  height: 120px;
+  position: relative;
+  background: #1E1B18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mcBannerBox.code { background: #0F172A; }
+.mcBannerBox.react { background: #082F49; }
+.mcBannerBox.python { background: #172554; }
+.mcBannerBox.figma { background: #FAF8F5; }
+.mcBannerBox.dsa { background: #0F172A; }
+.mcBannerBox.node { background: #052E16; }
+.mcBannerBox.system { background: #FAF8F5; border-bottom: 1px solid #F3EBE1; }
+.mcBannerBox.ml { background: #1E293B; }
+
+.mcLogoBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  z-index: 3;
+}
+
+.mcDotsMenu {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: #FFFFFF;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.mcStatusBadge {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 800;
+  z-index: 3;
+}
+
+.mcStatusBadge.in-progress { background: #FFFFFF; color: #0284C7; }
+.mcStatusBadge.completed { background: #10B981; color: #FFFFFF; }
+.mcStatusBadge.saved { background: #F3E8FF; color: #7E22CE; }
+.mcStatusBadge.not-started { background: #F1F5F9; color: #64748B; }
+.mcStatusBadge.locked { background: rgba(0,0,0,0.6); color: #FFFFFF; }
+
+.bannerOverlayCode code { color: #38BDF8; font-size: 11px; }
+.bannerOverlayReact { font-size: 48px; opacity: 0.8; }
+.bannerOverlayPython { font-size: 48px; opacity: 0.8; }
+.bannerOverlayDsa { font-size: 48px; opacity: 0.4; }
+.bannerOverlayNode { color: #4ADE80; font-weight: 800; font-size: 16px; }
+.bannerOverlaySystem { color: #1E1B18; font-weight: 800; font-size: 14px; }
+.bannerOverlayMl .lockBigIcon { font-size: 32px; color: #94A3B8; }
+
+.mcCardContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.mcCardContent h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.mcCourseSubtitle {
+  font-size: 11px;
+  color: #64748B;
+  margin: 0 0 14px 0;
+  line-height: 1.4;
+  min-height: 32px;
+}
+
+.mcProgressArea {
+  margin-bottom: 12px;
+}
+
+.mcProgressBarTrack {
+  height: 6px;
+  background: #E2E8F0;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.mcProgressBarFill {
+  height: 100%;
+  background: #F9572A;
+  border-radius: 99px;
+}
+
+.mcPctLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.mcPremiumBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #D97706;
+  background: #FEF3C7;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.mcCardFooterMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748B;
+  margin-bottom: 14px;
+}
+
+.ratingText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.btnCourseCardAction {
+  width: 100%;
+  padding: 8px;
+  border-radius: 99px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnCourseCardAction.in-progress, .btnCourseCardAction.not-started, .btnCourseCardAction.saved {
+  background: #FFF0EB;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+}
+
+.btnCourseCardAction.completed {
+  background: #ECFDF5;
+  color: #10B981;
+  border: 1px solid #A7F3D0;
+}
+
+.btnCourseCardAction.locked {
+  background: #F1F5F9;
+  color: #64748B;
+  border: 1px solid #CBD5E1;
+}
+
+.btnCourseCardAction:hover {
+  filter: brightness(0.95);
+}
+
+/* EXPLORE LEARNING PATHS BANNER */
+.mcExplorePathsBanner {
+  background: linear-gradient(135deg, #FFF8F3 0%, #FFF5EF 100%);
+  border: 1px solid #FDE8CD;
+  border-radius: 24px;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bannerLeftInfo h3 { font-size: 18px; font-weight: 800; margin: 0 0 6px 0; }
+.bannerLeftInfo p { font-size: 12px; color: #64748B; margin: 0 0 14px 0; }
+
+.btnBrowsePaths {
+  background: #FFFFFF;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+  padding: 8px 18px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnBrowsePaths:hover { background: #F9572A; color: #FFFFFF; }
+.mountainGraphicDeco { font-size: 48px; }
+
+/* RIGHT COLUMN SIDEBAR WIDGETS */
+.mcRightSidebar { display: flex; flex-direction: column; gap: 20px; }
+
+/* Student dashboard: course overview widgets are currently disabled. */
+.mcGridContainer { grid-template-columns: minmax(0, 1fr) !important; }
+.mcRightSidebar { display: none !important; }
+
+.mcOverviewCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.mcOverviewCard h4 { font-size: 14px; font-weight: 800; margin: 0 0 14px 0; }
+
+.overviewGrid2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.overviewBox {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boxIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.boxIcon.orange { background: #FFF0EB; color: #F9572A; }
+.boxIcon.green { background: #ECFDF5; color: #10B981; }
+.boxIcon.purple { background: #F3E8FF; color: #7E22CE; }
+.boxIcon.purpleLight { background: #F5F3FF; color: #8B5CF6; }
+
+.boxValText strong { display: block; font-size: 16px; font-weight: 800; line-height: 1.1; }
+.boxValText span { font-size: 9px; color: #64748B; font-weight: 600; }
+
+.weeklyGoalHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.goalVal { font-size: 11px; font-weight: 800; color: #F9572A; }
+
+.goalTrack { height: 6px; background: #FAD6C8; border-radius: 99px; overflow: hidden; margin-bottom: 8px; }
+.goalFill { height: 100%; background: #F9572A; }
+.goalSubtext { font-size: 10px; color: #64748B; }
+
+.mcContinueList { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+
+.continueItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 12px;
+}
+
+.itemIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.itemIcon.yellow { background: #FEF08A; color: #CA8A04; }
+.itemIcon.blue { background: #E0F2FE; color: #0284C7; }
+.itemIcon.pyYellow { background: #FEF9C3; color: #854D0E; }
+
+.itemInfo { flex: 1; }
+.itemInfo h5 { font-size: 11px; font-weight: 800; margin: 0 0 2px 0; }
+.itemInfo span { font-size: 9px; color: #94A3B8; }
+.itemPct { font-size: 10px; font-weight: 800; color: #F9572A; }
+
+.viewAllProgressLink { font-size: 11px; font-weight: 800; color: #F9572A; text-align: center; cursor: pointer; }
+
+.recHeaderRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.recCarouselBox { display: flex; align-items: center; gap: 8px; }
+
+.carouselArrow {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #64748B;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.recCard { flex: 1; background: #FAF8F5; border: 1px solid #F3EBE1; border-radius: 16px; padding: 12px; text-align: center; }
+.recIconBox { font-size: 24px; margin-bottom: 6px; }
+.recCard h5 { font-size: 11px; font-weight: 800; margin: 0 0 6px 0; }
+
+.recRatingRow { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 10px; color: #64748B; margin-bottom: 10px; }
+.popularPill { background: #E0F2FE; color: #0284C7; font-size: 9px; font-weight: 800; padding: 1px 6px; border-radius: 99px; }
+
+.btnExploreCourse {
+  width: 100%;
+  padding: 8px;
+  background: #F9572A;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mcBottomPlantDecor { text-align: center; font-size: 32px; padding-top: 10px; }
+
+/* ───────────────────────────────────────────────────────────── */
+/* ── COURSE CHECKOUT MODAL STYLES (1-TO-1 EXACT MATCH) ── */
+/* ───────────────────────────────────────────────────────────── */
+
+.chkModalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInModal 0.25s ease forwards;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.chkModalCard {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 580px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.chkModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.chkHeaderTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chkCartIconBadge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFF0EB;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.chkHeaderTitleRow h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #F9572A;
+  margin: 0;
+}
+
+.chkCloseBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FFF0EB;
+  border: 1px solid #FAD6C8;
+  color: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chkCloseBtn:hover {
+  background: #F9572A;
+  color: #FFFFFF;
+}
+
+/* COURSE INFO ROW inside Modal */
+.chkCourseInfoRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.chkCourseThumb {
+  width: 110px;
+  height: 110px;
+  border-radius: 18px;
+  background: #0F172A;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.codeThumbGraphic code {
+  color: #38BDF8;
+  font-size: 10px;
+}
+
+.chkCourseTextInfo h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0 0 6px 0;
+}
+
+.chkCourseTextInfo p {
+  font-size: 12px;
+  color: #64748B;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.chkPillBadgesRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chkBadgePill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
+}
+
+.chkBadgePill.orange { background: #FFF0EB; color: #F9572A; }
+.chkBadgePill.rose { background: #FFE4E6; color: #E11D48; }
+
+/* PRICE BREAKDOWN BOX inside Modal */
+.chkPriceBreakdownBox {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chkPriceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.chkPriceRow.scholarship {
+  color: #059669;
+  font-weight: 700;
+}
+
+.discountVal {
+  color: #10B981;
+  font-weight: 800;
+}
+
+.chkDividerDashed {
+  height: 1px;
+  border-top: 1px dashed #E2E8F0;
+  margin: 4px 0;
+}
+
+.chkPriceRow.total {
+  font-size: 15px;
+  color: #1E1B18;
+}
+
+.totalZeroVal {
+  font-size: 20px;
+  font-weight: 800;
+  color: #F9572A;
+}
+
+/* PERKS ROW */
+.chkPerksRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  margin-bottom: 20px;
+}
+
+.bulletDot {
+  color: #CBD5E1;
+}
+
+/* MAIN COMPLETE ENROLLMENT CTA BUTTON */
+.btnCompleteEnrollment {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #FF7A59 0%, #F9572A 100%);
+  border: none;
+  border-radius: 99px;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(249, 87, 42, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 14px;
+}
+
+.btnCompleteEnrollment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(249, 87, 42, 0.45);
+}
+
+/* SECURITY SUBTEXT */
+.chkSecuritySubtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+/* SUCCESS TOAST */
+.mcEnrollSuccessToast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: #FFFFFF;
+  border: 1px solid #A7F3D0;
+  border-radius: 99px;
+  padding: 12px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #065F46;
+  z-index: 10000;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 1100px) {
+  .mcCourseGrid { grid-template-columns: repeat(2, 1fr); }
+  .mcGridContainer { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   MY COURSES PAGE - DARK THEME OVERRIDES (EXACT REFERENCE MATCH)
+   ========================================================================== */
+
+.mcCoursesWrapper.dark-theme,
+[data-theme="dark"] .mcCoursesWrapper {
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(249, 87, 42, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(249, 87, 42, 0.04) 0%, transparent 45%);
+  color: #F8FAFC;
+}
+
+.mcCoursesWrapper.dark-theme .mcLeftSidebar,
+[data-theme="dark"] .mcLeftSidebar {
+  background: #111724;
+  border-color: #1E293B;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.mcCoursesWrapper.dark-theme .mcPageHeader h1,
+[data-theme="dark"] .mcPageHeader h1 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .mcPageHeader p,
+[data-theme="dark"] .mcPageHeader p {
+  color: #94A3B8;
+}
+
+/* Filter Pills & Sort Dropdown */
+.mcCoursesWrapper.dark-theme .mcPill,
+[data-theme="dark"] .mcPill {
+  background: #131926;
+  border-color: #212B3E;
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .mcPill:hover,
+[data-theme="dark"] .mcPill:hover {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+}
+
+.mcCoursesWrapper.dark-theme .mcPill.active,
+[data-theme="dark"] .mcPill.active {
+  background: #F9572A;
+  color: #FFFFFF;
+  border-color: #F9572A;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.35);
+}
+
+.mcCoursesWrapper.dark-theme .mcSortSelect,
+[data-theme="dark"] .mcSortSelect {
+  background: #131926;
+  border-color: #212B3E;
+  color: #94A3B8;
+}
+
+/* 8 Course Cards Grid */
+.mcCoursesWrapper.dark-theme .mcCourseCard,
+[data-theme="dark"] .mcCourseCard {
+  background: #131926;
+  border: 1px solid #212B3E;
+  box-shadow: none;
+}
+
+.mcCoursesWrapper.dark-theme .mcCourseCard:hover,
+[data-theme="dark"] .mcCourseCard:hover {
+  border-color: rgba(249, 87, 42, 0.5);
+}
+
+.mcCoursesWrapper.dark-theme .mcCardContent h4,
+[data-theme="dark"] .mcCardContent h4 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .mcCourseSubtitle,
+[data-theme="dark"] .mcCourseSubtitle {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .mcProgressBarTrack,
+[data-theme="dark"] .mcProgressBarTrack {
+  background: #1E293B;
+}
+
+.mcCoursesWrapper.dark-theme .mcProgressBarFill,
+[data-theme="dark"] .mcProgressBarFill {
+  background: #F9572A;
+}
+
+.mcCoursesWrapper.dark-theme .mcPctLabel,
+[data-theme="dark"] .mcPctLabel {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .mcCardFooterMeta,
+[data-theme="dark"] .mcCardFooterMeta {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .btnCourseCardAction.in-progress,
+.mcCoursesWrapper.dark-theme .btnCourseCardAction.not-started,
+.mcCoursesWrapper.dark-theme .btnCourseCardAction.saved,
+[data-theme="dark"] .btnCourseCardAction.in-progress,
+[data-theme="dark"] .btnCourseCardAction.not-started,
+[data-theme="dark"] .btnCourseCardAction.saved {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+  border: 1px solid rgba(249, 87, 42, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .btnCourseCardAction.completed,
+[data-theme="dark"] .btnCourseCardAction.completed {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .btnCourseCardAction.locked,
+[data-theme="dark"] .btnCourseCardAction.locked {
+  background: #182030;
+  color: #94A3B8;
+  border: 1px solid #212B3E;
+}
+
+/* Explore Learning Paths Banner */
+.mcCoursesWrapper.dark-theme .mcExplorePathsBanner,
+[data-theme="dark"] .mcExplorePathsBanner {
+  background: linear-gradient(135deg, #182030 0%, #131926 100%);
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .bannerLeftInfo h3,
+[data-theme="dark"] .bannerLeftInfo h3 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .bannerLeftInfo p,
+[data-theme="dark"] .bannerLeftInfo p {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .btnBrowsePaths,
+[data-theme="dark"] .btnBrowsePaths {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+  border-color: rgba(249, 87, 42, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .btnBrowsePaths:hover,
+[data-theme="dark"] .btnBrowsePaths:hover {
+  background: #F9572A;
+  color: #FFFFFF;
+}
+
+/* Right Sidebar Widgets */
+.mcCoursesWrapper.dark-theme .mcOverviewCard,
+[data-theme="dark"] .mcOverviewCard {
+  background: #131926;
+  border-color: #212B3E;
+  box-shadow: none;
+}
+
+.mcCoursesWrapper.dark-theme .mcOverviewCard h4,
+[data-theme="dark"] .mcOverviewCard h4 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .overviewBox,
+[data-theme="dark"] .overviewBox {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .boxValText strong,
+[data-theme="dark"] .boxValText strong {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .boxValText span,
+[data-theme="dark"] .boxValText span {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .goalSubtext,
+[data-theme="dark"] .goalSubtext {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .continueItem,
+[data-theme="dark"] .continueItem {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .itemInfo h5,
+[data-theme="dark"] .itemInfo h5 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .itemInfo span,
+[data-theme="dark"] .itemInfo span {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .recCard,
+[data-theme="dark"] .recCard {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .recCard h5,
+[data-theme="dark"] .recCard h5 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .recRatingRow,
+[data-theme="dark"] .recRatingRow {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .carouselArrow,
+[data-theme="dark"] .carouselArrow {
+  background: #182030;
+  border-color: #212B3E;
+  color: #94A3B8;
+}
+
+/* Course Checkout Modal Dark Theme Overrides (Image 1) */
+.mcCoursesWrapper.dark-theme .chkModalCard,
+[data-theme="dark"] .chkModalCard {
+  background: #111724;
+  border: 1px solid rgba(249, 87, 42, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkHeaderTitleRow h2,
+[data-theme="dark"] .chkHeaderTitleRow h2 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkCloseBtn,
+[data-theme="dark"] .chkCloseBtn {
+  background: #182030;
+  border-color: #212B3E;
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .chkCloseBtn:hover,
+[data-theme="dark"] .chkCloseBtn:hover {
+  background: rgba(249, 87, 42, 0.2);
+  color: #F9572A;
+}
+
+.mcCoursesWrapper.dark-theme .chkCourseTextInfo h3,
+[data-theme="dark"] .chkCourseTextInfo h3 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkCourseTextInfo p,
+[data-theme="dark"] .chkCourseTextInfo p {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .chkBadgePill.orange,
+[data-theme="dark"] .chkBadgePill.orange {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+  border: 1px solid rgba(249, 87, 42, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .chkBadgePill.rose,
+[data-theme="dark"] .chkBadgePill.rose {
+  background: rgba(225, 29, 72, 0.15);
+  color: #FB7185;
+  border: 1px solid rgba(225, 29, 72, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceBreakdownBox,
+[data-theme="dark"] .chkPriceBreakdownBox {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceRow,
+[data-theme="dark"] .chkPriceRow {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceRow.total,
+[data-theme="dark"] .chkPriceRow.total {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceRow.scholarship,
+[data-theme="dark"] .chkPriceRow.scholarship {
+  color: #10B981;
+}
+
+.mcCoursesWrapper.dark-theme .discountVal,
+[data-theme="dark"] .discountVal {
+  color: #10B981;
+}
+
+.mcCoursesWrapper.dark-theme .totalZeroVal,
+[data-theme="dark"] .totalZeroVal {
+  color: #F9572A;
+}
+
+.mcCoursesWrapper.dark-theme .chkDividerDashed,
+[data-theme="dark"] .chkDividerDashed {
+  border-top-color: #212B3E;
+}
+
+  background: #182030;
+  color: #94A3B8;
+  border: 1px solid #212B3E;
+}
+
+/* Explore Learning Paths Banner */
+.mcCoursesWrapper.dark-theme .mcExplorePathsBanner,
+[data-theme="dark"] .mcExplorePathsBanner {
+  background: linear-gradient(135deg, #182030 0%, #131926 100%);
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .bannerLeftInfo h3,
+[data-theme="dark"] .bannerLeftInfo h3 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .bannerLeftInfo p,
+[data-theme="dark"] .bannerLeftInfo p {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .btnBrowsePaths,
+[data-theme="dark"] .btnBrowsePaths {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+  border-color: rgba(249, 87, 42, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .btnBrowsePaths:hover,
+[data-theme="dark"] .btnBrowsePaths:hover {
+  background: #F9572A;
+  color: #FFFFFF;
+}
+
+/* Right Sidebar Widgets */
+.mcCoursesWrapper.dark-theme .mcOverviewCard,
+[data-theme="dark"] .mcOverviewCard {
+  background: #131926;
+  border-color: #212B3E;
+  box-shadow: none;
+}
+
+.mcCoursesWrapper.dark-theme .mcOverviewCard h4,
+[data-theme="dark"] .mcOverviewCard h4 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .overviewBox,
+[data-theme="dark"] .overviewBox {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .boxValText strong,
+[data-theme="dark"] .boxValText strong {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .boxValText span,
+[data-theme="dark"] .boxValText span {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .goalSubtext,
+[data-theme="dark"] .goalSubtext {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .continueItem,
+[data-theme="dark"] .continueItem {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .itemInfo h5,
+[data-theme="dark"] .itemInfo h5 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .itemInfo span,
+[data-theme="dark"] .itemInfo span {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .recCard,
+[data-theme="dark"] .recCard {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .recCard h5,
+[data-theme="dark"] .recCard h5 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .recRatingRow,
+[data-theme="dark"] .recRatingRow {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .carouselArrow,
+[data-theme="dark"] .carouselArrow {
+  background: #182030;
+  border-color: #212B3E;
+  color: #94A3B8;
+}
+
+/* Course Checkout Modal Dark Theme Overrides (Image 1) */
+.mcCoursesWrapper.dark-theme .chkModalCard,
+[data-theme="dark"] .chkModalCard {
+  background: #111724;
+  border: 1px solid rgba(249, 87, 42, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkHeaderTitleRow h2,
+[data-theme="dark"] .chkHeaderTitleRow h2 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkCloseBtn,
+[data-theme="dark"] .chkCloseBtn {
+  background: #182030;
+  border-color: #212B3E;
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .chkCloseBtn:hover,
+[data-theme="dark"] .chkCloseBtn:hover {
+  background: rgba(249, 87, 42, 0.2);
+  color: #F9572A;
+}
+
+.mcCoursesWrapper.dark-theme .chkCourseTextInfo h3,
+[data-theme="dark"] .chkCourseTextInfo h3 {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkCourseTextInfo p,
+[data-theme="dark"] .chkCourseTextInfo p {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .chkBadgePill.orange,
+[data-theme="dark"] .chkBadgePill.orange {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+  border: 1px solid rgba(249, 87, 42, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .chkBadgePill.rose,
+[data-theme="dark"] .chkBadgePill.rose {
+  background: rgba(225, 29, 72, 0.15);
+  color: #FB7185;
+  border: 1px solid rgba(225, 29, 72, 0.3);
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceBreakdownBox,
+[data-theme="dark"] .chkPriceBreakdownBox {
+  background: #182030;
+  border-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceRow,
+[data-theme="dark"] .chkPriceRow {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceRow.total,
+[data-theme="dark"] .chkPriceRow.total {
+  color: #FFFFFF;
+}
+
+.mcCoursesWrapper.dark-theme .chkPriceRow.scholarship,
+[data-theme="dark"] .chkPriceRow.scholarship {
+  color: #10B981;
+}
+
+.mcCoursesWrapper.dark-theme .discountVal,
+[data-theme="dark"] .discountVal {
+  color: #10B981;
+}
+
+.mcCoursesWrapper.dark-theme .totalZeroVal,
+[data-theme="dark"] .totalZeroVal {
+  color: #F9572A;
+}
+
+.mcCoursesWrapper.dark-theme .chkDividerDashed,
+[data-theme="dark"] .chkDividerDashed {
+  border-top-color: #212B3E;
+}
+
+.mcCoursesWrapper.dark-theme .chkPerksRow,
+[data-theme="dark"] .chkPerksRow {
+  color: #94A3B8;
+}
+
+.mcCoursesWrapper.dark-theme .bulletDot,
+[data-theme="dark"] .bulletDot {
+  color: #334155;
+}
+
+.mcCoursesWrapper.dark-theme .btnCompleteEnrollment,
+[data-theme="dark"] .btnCompleteEnrollment {
+  background: linear-gradient(135deg, #F9572A 0%, #EA580C 100%);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(249, 87, 42, 0.45);
+}
+
+.mcCoursesWrapper.dark-theme .chkSecuritySubtext,
+[data-theme="dark"] .chkSecuritySubtext {
+  color: #64748B;
+}
+
+/* ── SAVE / BOOKMARK BUTTON ON COURSE CARD ─────────────────────────────── */
+.mcSaveBtn {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.mcSaveBtn:hover {
+  background: rgba(249, 87, 42, 0.85);
+  color: #FFFFFF;
+  transform: scale(1.12);
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.45);
+}
+
+.mcSaveBtn.saved {
+  background: linear-gradient(135deg, #F9572A, #EA580C);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(249, 87, 42, 0.5);
+  transform: scale(1.05);
+}
+
+.mcSaveBtn.saved:hover {
+  background: linear-gradient(135deg, #EA580C, #C2410C);
+  transform: scale(1.12);
+}
+
+/* ── SAVE TOAST ─────────────────────────────────────────────────────────── */
+.mcSaveToast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 10001;
+  animation: mcSaveToastIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+.mcSaveToast.saved {
+  background: linear-gradient(135deg, #FFF7F5, #FFF0EB);
+  color: #C2410C;
+  border: 1px solid #FAD6C8;
+}
+
+.mcSaveToast.removed {
+  background: #F8FAFC;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+@keyframes mcSaveToastIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.92); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+
+/* dark-mode overrides for save button */
+.mcCoursesWrapper.dark-theme .mcSaveBtn,
+[data-theme="dark"] .mcSaveBtn {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.mcCoursesWrapper.dark-theme .mcSaveBtn.saved,
+[data-theme="dark"] .mcSaveBtn.saved {
+  background: linear-gradient(135deg, #F9572A, #EA580C);
+}
+
+.mcCoursesWrapper.dark-theme .mcSaveToast.saved,
+[data-theme="dark"] .mcSaveToast.saved {
+  background: linear-gradient(135deg, #3B1206, #4A1A08);
+  color: #FED7AA;
+  border-color: #9A3412;
+}
+
+.mcCoursesWrapper.dark-theme .mcSaveToast.removed,
+[data-theme="dark"] .mcSaveToast.removed {
+  background: #1E293B;
+  color: #94A3B8;
+  border-color: #334155;
+}

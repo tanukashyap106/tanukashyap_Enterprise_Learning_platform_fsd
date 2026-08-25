@@ -1,0 +1,35 @@
+.landing {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.landing * {
+  box-sizing: border-box;
+}
+
+.cursorGlow {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249, 87, 42, 0.08), transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(35px);
+  z-index: 1;
+  transition: left 0.08s linear, top 0.08s linear;
+}
+
+/* ─── Dark Theme Landing Overrides (Matching User Uploaded UI Screenshots) ─── */
+[data-theme="dark"] .landing {
+  background: #06070D !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .cursorGlow {
+  background: radial-gradient(circle, rgba(249, 87, 42, 0.15), transparent 70%);
+}

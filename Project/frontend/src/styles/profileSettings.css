@@ -1,0 +1,613 @@
+/* Settings Page Stylesheet - SkillSphere Theme (1-to-1 Exact Match) */
+.psWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.psMainContainer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* TOAST ALERT NOTIFICATION */
+.psToastAlert {
+  background: #1E1B18;
+  color: #FFFFFF;
+  border-left: 4px solid #F9572A;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 12px;
+}
+
+/* ── LEFT SIDEBAR ── */
+.psLeftSidebar {
+  width: 245px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 28px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+.psLeftSidebar::-webkit-scrollbar { display: none; }
+.psLeftSidebar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.psSidebarHomeArchHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 12px 14px 12px;
+  margin-bottom: 8px;
+}
+
+.psArchLine {
+  position: absolute;
+  top: -8px;
+  left: 36px;
+  width: 150px;
+  height: 50px;
+  border: 2px dashed #FAD6C8;
+  border-bottom: none;
+  border-right: none;
+  border-radius: 30px 0 0 0;
+  pointer-events: none;
+}
+
+.psHomeCircularBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.35);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.psSidebarLevelWidget {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 14px;
+}
+
+.levelHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.lvlTrophy { font-size: 20px; }
+.levelHeaderRow strong { display: block; font-size: 13px; font-weight: 800; }
+.levelHeaderRow span { font-size: 10px; color: #64748B; }
+
+.lvlBarTrack { height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; margin-bottom: 4px; }
+.lvlBarFill { height: 100%; background: #F9572A; }
+.lvlXpSub { font-size: 9px; color: #94A3B8; display: block; text-align: right; }
+
+/* ── RIGHT MAIN BODY AREA ── */
+.psRightBodyArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.psPageHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.psPageHeader h1 { font-size: 28px; font-weight: 800; margin: 0 0 4px 0; }
+.psPageHeader p { font-size: 14px; color: #64748B; margin: 0; }
+
+/* SUB TABS ROW (ONLY 3 TABS) */
+.psSubTabsRow {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid #F3EBE1;
+  padding-bottom: 4px;
+}
+
+.psTab {
+  background: transparent;
+  border: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 8px 4px 12px 4px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.psTab.active { color: #F9572A; font-weight: 800; }
+.psTab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 3px;
+  background: #F9572A;
+  border-radius: 99px;
+}
+
+/* 2-COLUMN WORKSPACE GRID */
+.psWorkspaceGrid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+}
+
+.psFormBlock {
+  background: #FFFFFF;
+  border: 1px solid #F3EBE1;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.psFormBlock h3 { font-size: 18px; font-weight: 800; margin: 0 0 2px 0; }
+.psFormBlock .subText { font-size: 12px; color: #64748B; margin: 0 0 20px 0; }
+
+/* AVATAR SECTION */
+.avatarSectionRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.avatarCircleBox { position: relative; width: 100px; height: 100px; }
+.avatarPlaceholder { width: 100%; height: 100%; border-radius: 50%; background: #F1F5F9; display: flex; align-items: center; justify-content: center; font-size: 48px; border: 2px solid #E2E8F0; }
+.cameraBtn { position: absolute; bottom: 2px; right: 2px; width: 32px; height: 32px; border-radius: 50%; background: #F9572A; color: #FFF; border: 2px solid #FFF; display: flex; align-items: center; justify-content: center; font-size: 13px; cursor: pointer; }
+.photoSub { font-size: 10px; color: #94A3B8; }
+
+/* FORM FIELDS */
+.psForm2Col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 14px; }
+
+.inputGroup { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; position: relative; }
+.inputGroup label { font-size: 11px; font-weight: 700; color: #475569; }
+.inputGroup input, .inputGroup select, .inputGroup textarea {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: #1E1B18;
+  outline: none;
+}
+
+.inputGroup input:focus, .inputGroup select:focus, .inputGroup textarea:focus { border-color: #F9572A; background: #FFFFFF; }
+.charCounter { position: absolute; bottom: 8px; right: 12px; font-size: 9px; color: #94A3B8; }
+
+.socialLinksSection { margin-top: 10px; margin-bottom: 20px; }
+.socialLinksSection label { font-size: 11px; font-weight: 700; color: #475569; display: block; margin-bottom: 8px; }
+
+.social3Row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.socialInputGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+.socialInputGroup .sIcon { color: #64748B; font-size: 16px; }
+.socialInputGroup input { border: none; background: transparent; padding: 0; font-size: 11px; width: 100%; outline: none; }
+
+.btnFormRow { display: flex; gap: 12px; margin-top: 20px; }
+.btnSavePrimary { background: #F9572A; color: #FFFFFF; border: none; padding: 10px 24px; border-radius: 99px; font-size: 12px; font-weight: 800; cursor: pointer; }
+.btnCancelOutline { background: #FFFFFF; color: #64748B; border: 1px solid #E2E8F0; padding: 10px 24px; border-radius: 99px; font-size: 12px; font-weight: 700; cursor: pointer; }
+
+/* ACCOUNT TAB SPECIFIC */
+.formGroupBlock { border-bottom: 1px solid #F3EBE1; padding-bottom: 16px; margin-bottom: 20px; }
+.formGroupBlock h4 { font-size: 14px; font-weight: 800; margin: 0 0 14px 0; }
+
+.pwdInputRow { display: flex; gap: 12px; align-items: center; }
+.pwdInputRow input { flex: 1; }
+.btnChangePwd { background: #FFF0EB; color: #F9572A; border: 1px solid #FAD6C8; padding: 8px 16px; border-radius: 99px; font-size: 11px; font-weight: 800; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+
+.checkboxGroup { margin-top: 10px; margin-bottom: 16px; }
+.checkboxGroup label { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #1E1B18; cursor: pointer; }
+.checkboxGroup small { font-size: 10px; color: #94A3B8; display: block; margin-left: 24px; margin-top: 2px; }
+
+.deactivateBlock { background: #FEF2F2; border: 1px solid #FCA5A5; border-radius: 16px; padding: 16px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.deactivateBlock h4 { font-size: 13px; font-weight: 800; color: #991B1B; margin: 0 0 2px 0; }
+.deactivateBlock p { font-size: 10px; color: #7F1D1D; margin: 0; }
+.btnDeactivate { background: #FFFFFF; color: #EF4444; border: 1px solid #EF4444; padding: 6px 16px; border-radius: 99px; font-size: 11px; font-weight: 800; cursor: pointer; }
+
+/* CONNECTED APPS SPECIFIC */
+.connectedSection { margin-bottom: 24px; }
+.connectedSection h4 { font-size: 14px; font-weight: 800; margin: 0 0 12px 0; }
+
+.emptyAppsBox {
+  background: #FAF8F5;
+  border: 1px dashed #CBD5E1;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emptyLinkIcon { font-size: 32px; margin-bottom: 8px; }
+.emptyAppsBox h5 { font-size: 14px; font-weight: 800; margin: 0 0 2px 0; }
+.emptyAppsBox p { font-size: 11px; color: #64748B; margin: 0 0 14px 0; }
+.btnExploreApps { background: #F9572A; color: #FFF; border: none; padding: 6px 18px; border-radius: 99px; font-size: 11px; font-weight: 800; cursor: pointer; }
+
+.connectedAppsGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px; }
+
+.activeConnectedCard {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activeConnectedCard .appIcon { font-size: 24px; }
+.activeConnectedCard h5 { font-size: 12px; font-weight: 800; margin: 0; }
+.statusConnected { font-size: 9px; font-weight: 800; color: #10B981; }
+.btnDisconnect { margin-left: auto; background: #FFFFFF; color: #EF4444; border: 1px solid #FCA5A5; padding: 4px 10px; border-radius: 99px; font-size: 9px; font-weight: 800; cursor: pointer; }
+
+.popularAppsSection h4 { font-size: 14px; font-weight: 800; margin: 0 0 2px 0; }
+
+.popularAppsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.appCard {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.appHeaderRow { display: flex; align-items: flex-start; gap: 10px; }
+.appLogoIcon { font-size: 24px; flex-shrink: 0; }
+.appHeaderRow h5 { font-size: 12px; font-weight: 800; margin: 0 0 2px 0; }
+.appHeaderRow p { font-size: 9px; color: #64748B; margin: 0 0 8px 0; line-height: 1.2; height: 22px; }
+
+.btnConnectApp {
+  background: #FFFFFF;
+  color: #F9572A;
+  border: 1px solid #FAD6C8;
+  padding: 3px 12px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btnConnectApp.connected { background: #ECFDF5; color: #10B981; border-color: #A7F3D0; }
+.showMoreRow { text-align: center; margin-top: 14px; }
+.btnShowMore { background: transparent; border: none; color: #F9572A; font-weight: 800; font-size: 11px; cursor: pointer; }
+
+/* RIGHT COLUMN SIDEBAR WIDGETS */
+.psRightSidebarCol { display: flex; flex-direction: column; gap: 20px; }
+.psWidgetCard { background: #FFFFFF; border: 1px solid #F3EBE1; border-radius: 24px; padding: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02); }
+.psWidgetCard h4 { font-size: 14px; font-weight: 800; margin: 0 0 14px 0; }
+.widgetTitleRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+
+.profilePreviewCard {
+  background: #FAF8F5;
+  border: 1px solid #F3EBE1;
+  border-radius: 20px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradientBanner { height: 50px; background: linear-gradient(135deg, #FAD6C8 0%, #F3E8FF 100%); margin: -16px -16px 0 -16px; }
+.avatarPreviewCircle { width: 60px; height: 60px; border-radius: 50%; background: #F1F5F9; font-size: 32px; display: flex; align-items: center; justify-content: center; margin: -30px auto 8px auto; border: 3px solid #FFF; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.lvlBadgeText { font-size: 11px; font-weight: 800; color: #F9572A; margin-bottom: 12px; }
+
+.stats3Grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; border-top: 1px solid #F3EBE1; padding-top: 10px; }
+.stats3Grid strong { font-size: 14px; font-weight: 800; color: #1E1B18; display: block; }
+.stats3Grid span { font-size: 9px; color: #94A3B8; }
+
+.pctGreen { font-size: 11px; font-weight: 800; color: #10B981; }
+.pTrack { height: 6px; background: #E2E8F0; border-radius: 99px; overflow: hidden; margin-bottom: 14px; }
+.pFill { height: 100%; background: #F9572A; }
+
+.completionChecklist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 11px; }
+.completionChecklist li { display: flex; align-items: center; gap: 8px; }
+.completionChecklist span { flex: 1; color: #475569; }
+.completionChecklist .cmp { color: #10B981; font-size: 9px; }
+.completionChecklist .pnd { color: #F59E0B; font-size: 9px; }
+
+.quickActionsList { display: flex; flex-direction: column; gap: 8px; }
+.quickActionsList button { background: #FAF8F5; border: 1px solid #F3EBE1; border-radius: 12px; padding: 10px 12px; font-size: 11px; font-weight: 700; color: #1E1B18; display: flex; align-items: center; gap: 10px; cursor: pointer; text-align: left; }
+.quickActionsList button span { flex: 1; }
+
+.profileTipsBox, .helpCenterBox { background: #FAF8F5; border: 1px solid #F3EBE1; border-radius: 20px; padding: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.shieldIcon, .headsetIcon { font-size: 28px; color: #8B5CF6; }
+.headsetIcon { color: #F9572A; }
+.profileTipsBox h5, .helpCenterBox h5 { font-size: 13px; font-weight: 800; margin: 0 0 2px 0; }
+.profileTipsBox p, .helpCenterBox p { font-size: 10px; color: #64748B; margin: 0; line-height: 1.3; }
+.btnViewProfileOutline, .btnGoHelpCenter { background: #FFFFFF; color: #F9572A; border: 1px solid #FAD6C8; padding: 6px 16px; border-radius: 99px; font-size: 10px; font-weight: 800; cursor: pointer; align-self: flex-end; }
+
+.securityOverviewCard { background: #FFF0EB; border: 1px solid #FAD6C8; border-radius: 16px; padding: 12px; display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.secShieldIcon { font-size: 28px; }
+.securityOverviewCard span { font-size: 10px; color: #64748B; display: block; }
+.secGoodText { font-size: 13px; font-weight: 800; color: #10B981; }
+
+.secChecklist { list-style: none; padding: 0; margin: 0 0 14px 0; display: flex; flex-direction: column; gap: 8px; font-size: 10px; color: #475569; }
+.secChecklist li { display: flex; align-items: center; gap: 6px; }
+
+.btnGoSecurityOutline { width: 100%; background: #FFFFFF; color: #F9572A; border: 1px solid #FAD6C8; padding: 6px; border-radius: 99px; font-size: 10px; font-weight: 800; cursor: pointer; }
+
+.activityList { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+.actItem { display: flex; align-items: center; gap: 10px; font-size: 11px; }
+.actItem .aIcon { color: #0284C7; font-size: 16px; flex-shrink: 0; }
+.actItem h5 { font-size: 11px; font-weight: 800; margin: 0 0 1px 0; }
+.actItem span { font-size: 9px; color: #94A3B8; }
+
+.viewAllActivityLink { font-size: 10px; font-weight: 800; color: #F9572A; cursor: pointer; display: block; text-align: right; }
+
+.aboutAppsBox { background: #FAF8F5; border: 1px solid #F3EBE1; border-radius: 16px; padding: 12px; display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.appShieldIcon { font-size: 24px; }
+.aboutAppsBox p { font-size: 10px; color: #64748B; margin: 0; line-height: 1.3; }
+
+.secSubtext { font-size: 10px; color: #64748B; margin: 0 0 8px 0; }
+.learnSecurityLink { font-size: 10px; font-weight: 800; color: #F9572A; cursor: pointer; }
+
+/* MODALS */
+.psModalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.psModalContent {
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 28px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+}
+
+.psModalContent h3 { font-size: 18px; font-weight: 800; margin: 0 0 4px 0; }
+.modalSub { font-size: 11px; color: #64748B; margin: 0 0 16px 0; }
+.modalBtnRow { display: flex; gap: 12px; margin-top: 20px; }
+
+@media (max-width: 1100px) {
+  .psWorkspaceGrid { grid-template-columns: 1fr; }
+  .popularAppsGrid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── DARK THEME STYLES ── */
+.psWrapper.dark-theme {
+  background: #0F172A;
+  color: #F8FAFC;
+}
+
+.psWrapper.dark-theme .psFormBlock,
+.psWrapper.dark-theme .psWidgetCard,
+.psWrapper.dark-theme .profilePreviewCard,
+.psWrapper.dark-theme .appCard,
+.psWrapper.dark-theme .emptyAppsBox,
+.psWrapper.dark-theme .profileTipsBox,
+.psWrapper.dark-theme .helpCenterBox,
+.psWrapper.dark-theme .aboutAppsBox,
+.psWrapper.dark-theme .psModalContent {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.psWrapper.dark-theme .psPageHeader h1,
+.psWrapper.dark-theme .psFormBlock h3,
+.psWrapper.dark-theme .psWidgetCard h4,
+.psWrapper.dark-theme .formGroupBlock h4,
+.psWrapper.dark-theme .connectedSection h4,
+.psWrapper.dark-theme .popularAppsSection h4,
+.psWrapper.dark-theme .emptyAppsBox h5,
+.psWrapper.dark-theme .appHeaderRow h5,
+.psWrapper.dark-theme .profileTipsBox h5,
+.psWrapper.dark-theme .helpCenterBox h5,
+.psWrapper.dark-theme .actItem h5,
+.psWrapper.dark-theme .stats3Grid strong,
+.psWrapper.dark-theme .psModalContent h3 {
+  color: #F8FAFC;
+}
+
+.psWrapper.dark-theme .psPageHeader p,
+.psWrapper.dark-theme .psFormBlock .subText,
+.psWrapper.dark-theme .photoSub,
+.psWrapper.dark-theme .modalSub,
+.psWrapper.dark-theme .emptyAppsBox p,
+.psWrapper.dark-theme .appHeaderRow p,
+.psWrapper.dark-theme .profileTipsBox p,
+.psWrapper.dark-theme .helpCenterBox p,
+.psWrapper.dark-theme .aboutAppsBox p,
+.psWrapper.dark-theme .secSubtext,
+.psWrapper.dark-theme .stats3Grid span,
+.psWrapper.dark-theme .levelHeaderRow span {
+  color: #94A3B8;
+}
+
+.psWrapper.dark-theme .inputGroup label,
+.psWrapper.dark-theme .socialLinksSection label {
+  color: #CBD5E1;
+}
+
+.psWrapper.dark-theme .inputGroup input,
+.psWrapper.dark-theme .inputGroup select,
+.psWrapper.dark-theme .inputGroup textarea,
+.psWrapper.dark-theme .socialInputGroup,
+.psWrapper.dark-theme .quickActionsList button {
+  background: #0F172A;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+.psWrapper.dark-theme .socialInputGroup input {
+  color: #F8FAFC;
+}
+
+.psWrapper.dark-theme .inputGroup input:focus,
+.psWrapper.dark-theme .inputGroup select:focus,
+.psWrapper.dark-theme .inputGroup textarea:focus {
+  border-color: #F9572A;
+  background: #1E293B;
+}
+
+.psWrapper.dark-theme .psSubTabsRow,
+.psWrapper.dark-theme .formGroupBlock,
+.psWrapper.dark-theme .stats3Grid {
+  border-color: #334155;
+}
+
+.psWrapper.dark-theme .psTab {
+  color: #94A3B8;
+}
+
+.psWrapper.dark-theme .psTab.active {
+  color: #F9572A;
+}
+
+.psWrapper.dark-theme .btnCancelOutline,
+.psWrapper.dark-theme .btnDisconnect,
+.psWrapper.dark-theme .btnConnectApp,
+.psWrapper.dark-theme .btnViewProfileOutline,
+.psWrapper.dark-theme .btnGoHelpCenter,
+.psWrapper.dark-theme .btnGoSecurityOutline {
+  background: #0F172A;
+  color: #F8FAFC;
+  border-color: #334155;
+}
+
+.psWrapper.dark-theme .btnConnectApp {
+  color: #F9572A;
+  border-color: rgba(249, 87, 42, 0.4);
+}
+
+.psWrapper.dark-theme .activeConnectedCard {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.psWrapper.dark-theme .deactivateBlock {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.psWrapper.dark-theme .deactivateBlock h4 {
+  color: #FCA5A5;
+}
+
+.psWrapper.dark-theme .deactivateBlock p {
+  color: #FECACA;
+}
+
+.psWrapper.dark-theme .securityOverviewCard {
+  background: rgba(249, 87, 42, 0.15);
+  border-color: rgba(249, 87, 42, 0.3);
+}
+
+.psWrapper.dark-theme .securityOverviewCard span {
+  color: #CBD5E1;
+}
+
+.psWrapper.dark-theme .psSidebarLevelWidget {
+  background: #1E293B;
+  border-color: #334155;
+}
+
+/* SIDEBAR DARK MODE */
+.psWrapper.dark-theme .psLeftSidebar,
+.psWrapper.dark-theme .sdLeftSidebar {
+  background: #182030;
+  border-color: #212B3E;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.psWrapper.dark-theme .sdBrandLogo {
+  color: #FFFFFF;
+}
+
+.psWrapper.dark-theme .sdNavItem {
+  color: #94A3B8;
+}
+
+.psWrapper.dark-theme .sdNavItem:hover {
+  background: rgba(249, 87, 42, 0.12);
+  color: #F9572A;
+}
+
+.psWrapper.dark-theme .sdNavItem.active {
+  background: rgba(249, 87, 42, 0.16);
+  color: #F9572A;
+  font-weight: 800;
+}
+
+.psWrapper.dark-theme .sdSidebarFooterControls {
+  background: #131926;
+  border-color: #212B3E;
+}
+
+.psWrapper.dark-theme .sdRocketIllustrationBox {
+  background: linear-gradient(180deg, rgba(249, 87, 42, 0.15) 0%, rgba(17, 23, 36, 0.9) 100%);
+  border: 1px solid #1E293B;
+}
+
+.psWrapper.dark-theme .sdThemeToggleBtn {
+  color: #F9572A;
+}

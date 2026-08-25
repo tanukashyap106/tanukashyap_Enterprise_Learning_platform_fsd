@@ -1,0 +1,338 @@
+.navbar {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 92%;
+  max-width: 1400px;
+  height: 76px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 32px;
+  border-radius: 99px;
+
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid #F3EBE1;
+  box-shadow: 0 10px 30px rgba(249, 87, 42, 0.04), 0 2px 10px rgba(0, 0, 0, 0.02);
+
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1E1B18;
+  letter-spacing: -0.5px;
+}
+
+.logoIcon {
+  color: #F9572A;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.skill {
+  color: #1E1B18;
+  font-weight: 800;
+}
+
+.sphere {
+  color: #F9572A;
+  font-weight: 800;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLinks a {
+  color: #4A4A55;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.25s ease;
+  position: relative;
+  text-decoration: none;
+  padding: 6px 0;
+}
+
+.navLinks a:hover {
+  color: #F9572A;
+}
+
+.navLinks a.activeNav {
+  color: #F9572A;
+  font-weight: 700;
+}
+
+.navLinks a.activeNav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.5px;
+  background: #F9572A;
+  border-radius: 2px;
+}
+
+.navLinks a.adminLink {
+  color: #F9572A;
+  font-weight: 700;
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loginBtn {
+  padding: 10px 24px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #1E1B18;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 99px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+  background: #FFF9F7;
+  transform: translateY(-1px);
+}
+
+.registerBtn {
+  padding: 10px 24px;
+  background: #F9572A;
+  border: 1px solid #F9572A;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 99px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(249, 87, 42, 0.25);
+}
+
+.registerBtn:hover {
+  background: #E0481D;
+  border-color: #E0481D;
+  box-shadow: 0 6px 18px rgba(249, 87, 42, 0.35);
+  transform: translateY(-1px);
+}
+
+.xpBtn {
+  padding: 8px 18px;
+  border-radius: 99px;
+  border: 1px solid #F9572A;
+  background: #FFF0EB;
+  color: #F9572A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media(max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+/* User Profile Badge for Logged in Users */
+.userProfileContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.userProfileBadge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFF5F0;
+  border: 1px solid #FAD6C8;
+  padding: 6px 14px 6px 10px;
+  border-radius: 99px;
+}
+
+.avatarCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #F9572A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.userInfoText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.userName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E1B18;
+  max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.userRoleBadge {
+  font-size: 10px;
+  color: #F9572A;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logoutBtn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 99px;
+  background: #FFF0EB;
+  border: 1px solid #FAD6C8;
+  color: #F9572A;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+.logoutBtn:hover {
+  background: #F9572A;
+  color: #FFFFFF;
+  border-color: #F9572A;
+}
+
+/* ─── Theme Toggle Button in Navbar ─── */
+.themeToggleNavBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 99px;
+  border: 1px solid var(--border-color, rgba(249, 87, 42, 0.2));
+  background: var(--btn-secondary-bg, rgba(255, 255, 255, 0.8));
+  color: var(--text-primary, #1E1B18);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.themeToggleNavBtn:hover {
+  border-color: #F9572A;
+  color: #F9572A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(249, 87, 42, 0.15);
+}
+
+.themeNavIcon {
+  font-size: 15px;
+  transition: transform 0.3s ease;
+}
+
+.themeToggleNavBtn:hover .themeNavIcon {
+  transform: rotate(20deg);
+}
+
+.themeNavIcon.sun {
+  color: #F59E0B;
+}
+
+.themeNavIcon.moon {
+  color: #6366F1;
+}
+
+/* Dark Theme Adjustments for Navbar */
+[data-theme="dark"] .navbar {
+  background: rgba(10, 14, 30, 0.85);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .skill {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .navLinks a {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .navLinks a:hover,
+[data-theme="dark"] .navLinks a.activeNav {
+  color: #00E5FF;
+}
+
+[data-theme="dark"] .navLinks a.activeNav::after {
+  background: #00E5FF;
+}
+
+[data-theme="dark"] .loginBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .loginBtn:hover {
+  background: rgba(0, 229, 255, 0.15);
+  border-color: #00E5FF;
+  color: #00E5FF;
+}
+
+[data-theme="dark"] .userProfileBadge {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .userName {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .logoutBtn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .logoutBtn:hover {
+  background: #EF4444;
+  border-color: #EF4444;
+  color: #FFFFFF;
+}
+

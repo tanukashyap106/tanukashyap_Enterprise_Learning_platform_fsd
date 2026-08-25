@@ -1,0 +1,263 @@
+.footerSection {
+  background: #FFFBF7;
+  border-top: 1px solid #F3EBE1;
+  padding: 80px 40px 30px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.footerContainer {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.footerTopGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.footerBrandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1E1B18;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.footerLogo .logoIcon {
+  color: #F9572A;
+  font-size: 28px;
+}
+
+.footerBrandDesc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 24px;
+  max-width: 320px;
+}
+
+.socialIconsRow {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.socialIconBtn:hover {
+  background: #F9572A;
+  border-color: #F9572A;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.footerColTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin-bottom: 20px;
+}
+
+.footerLinkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLinkList a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLinkList a:hover {
+  color: #F9572A;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactList li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+.footerBottomRow {
+  border-top: 1px solid #F3EBE1;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.legalLinks a {
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLinks a:hover {
+  color: #F9572A;
+}
+
+@media (max-width: 1024px) {
+  .footerTopGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footerTopGrid {
+    grid-template-columns: 1fr;
+  }
+  .footerBottomRow {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+/* ─── Dark Theme Footer Overrides ─── */
+[data-theme="dark"] .footerSection {
+  background: #04050A;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .footerLogo span {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .footerLogo .logoIcon {
+  color: #F9572A;
+}
+
+[data-theme="dark"] .footerBrandDesc {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .socialIconBtn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .socialIconBtn:hover {
+  background: #F9572A;
+  border-color: #F9572A;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .footerColTitle {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .footerLinkList a {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .footerLinkList a:hover {
+  color: #F9572A;
+}
+
+[data-theme="dark"] .contactList li {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .footerBottomRow {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #64748B;
+}
+
+[data-theme="dark"] .legalLinks a {
+  color: #64748B;
+}
+
+[data-theme="dark"] .legalLinks a:hover {
+  color: #F9572A;
+}
+
+/* ── Student Dashboard Footer Extensions ── */
+.studentFooterGrid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1.2fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footerLinkIcon {
+  color: #F9572A;
+  font-size: 13px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footerBadge {
+  background: rgba(249, 87, 42, 0.15);
+  color: #F9572A;
+  border: 1px solid rgba(249, 87, 42, 0.3);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 99px;
+  margin-left: 6px;
+}
+
+@media (max-width: 1024px) {
+  .studentFooterGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .studentFooterGrid {
+    grid-template-columns: 1fr;
+  }
+}

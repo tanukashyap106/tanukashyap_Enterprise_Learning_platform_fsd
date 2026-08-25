@@ -1,0 +1,544 @@
+/* Login Page Stylesheet - SkillSphere Portal Aesthetic */
+.loginPageWrapper {
+  background: #FFFBF7;
+  color: #1E1B18;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  overflow-x: hidden;
+}
+
+.loginMainContainer {
+  width: 100%;
+  max-width: 1060px;
+  background: #FFF8F3;
+  border: 1px solid #FDE8CD;
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(249, 87, 42, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── LEFT PANEL (ILLUSTRATION & COPY) ── */
+.loginLeftPanel {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.leftDotsPattern {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 16px;
+  color: #FAD6C8;
+  letter-spacing: 4px;
+  line-height: 12px;
+  user-select: none;
+}
+
+.leftCopyHeader h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0 0 8px 0;
+  letter-spacing: -1px;
+}
+
+.leftCopyHeader h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #F9572A;
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+}
+
+.leftCopyHeader p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748B;
+  max-width: 400px;
+  margin: 0;
+}
+
+.leftIllustrationBox {
+  width: 100%;
+  max-width: 420px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginIllustrationImg {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(249, 87, 42, 0.1));
+  animation: loginFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes loginFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* ── RIGHT PANEL (FORM PORTAL) ── */
+.loginRightPanel {
+  background: #FFFFFF;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.02);
+}
+
+.portalTitleHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.portalTitleHeader h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1E1B18;
+  margin: 0 0 8px 0;
+}
+
+.orangeUnderline {
+  width: 32px;
+  height: 3px;
+  background: #F9572A;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ROLE SEGMENTED SWITCHER */
+.roleSegmentedBar {
+  display: flex;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.roleSegmentBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748B;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.roleSegmentBtn.active {
+  background: #FFF0EB;
+  border: 1px solid #FAD6C8;
+  color: #F9572A;
+  box-shadow: 0 2px 8px rgba(249, 87, 42, 0.08);
+}
+
+/* INPUT GROUPS */
+.loginFormContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputFieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputFieldGroup label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E1B18;
+}
+
+.inputWithIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWithIconWrapper input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #1E1B18;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputWithIconWrapper input:focus {
+  border-color: #F9572A;
+  box-shadow: 0 0 0 3px rgba(249, 87, 42, 0.1);
+}
+
+.fieldPrefixIcon {
+  position: absolute;
+  left: 14px;
+  color: #94A3B8;
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.passwordEyeToggle {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.passwordEyeToggle:hover {
+  color: #64748B;
+}
+
+/* OPTIONS ROW */
+.formOptionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+}
+
+.rememberCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748B;
+  cursor: pointer;
+}
+
+.forgotPassLink {
+  color: #F9572A;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.forgotPassLink:hover {
+  text-decoration: underline;
+}
+
+/* SUBMIT LOGIN BUTTON */
+.btnSubmitLogin {
+  width: 100%;
+  padding: 14px;
+  background: #F9572A;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 99px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(249, 87, 42, 0.3);
+  margin-top: 6px;
+}
+
+.btnSubmitLogin:hover {
+  background: #E0481D;
+  transform: translateY(-2px);
+}
+
+/* DIVIDER */
+.orDividerLine {
+  text-align: center;
+  margin: 16px 0;
+  position: relative;
+}
+
+.orDividerLine::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #E2E8F0;
+  z-index: 1;
+}
+
+.orDividerLine span {
+  position: relative;
+  z-index: 2;
+  background: #FFFFFF;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+/* GOOGLE LOGIN BUTTON */
+.btnGoogleLogin {
+  width: 100%;
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 99px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+
+.btnGoogleLogin:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.btnGoogleLogin img {
+  width: 18px;
+  height: 18px;
+}
+
+/* MOCK DEV MODE SECTION */
+.mockDevModeBox {
+  background: #FFF5EF;
+  border: 1px solid #FAD6C8;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-top: 16px;
+}
+
+.mockDevHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #F9572A;
+  margin-bottom: 4px;
+}
+
+.mockDevSubtext {
+  font-size: 11px;
+  font-weight: 600;
+  color: #F9572A;
+  margin-bottom: 10px;
+}
+
+.mockDevFormRow {
+  display: flex;
+  gap: 8px;
+}
+
+.mockDevInput {
+  flex: 1;
+  padding: 8px 14px;
+  background: #FFFFFF;
+  border: 1px solid #FAD6C8;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  outline: none;
+}
+
+.btnDevBypass {
+  padding: 8px 16px;
+  background: #FFE8DF;
+  border: 1px solid #FAD6C8;
+  color: #F9572A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnDevBypass:hover {
+  background: #F9572A;
+  color: #FFFFFF;
+}
+
+/* FOOTER SIGNUP TEXT */
+.bottomAuthText {
+  text-align: center;
+  font-size: 13px;
+  color: #64748B;
+  margin-top: 20px;
+}
+
+.bottomAuthText a {
+  color: #F9572A;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.bottomAuthText a:hover {
+  text-decoration: underline;
+}
+
+.errorMessageCard {
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  color: #DC2626;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 900px) {
+  .loginMainContainer {
+    grid-template-columns: 1fr;
+  }
+  .loginLeftPanel {
+    display: none;
+  }
+  .loginRightPanel {
+    padding: 36px 24px;
+  }
+}
+
+/* ─── Dark Theme Login Page Overrides ─── */
+[data-theme="dark"] .loginPageWrapper {
+  background: #06070D !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .loginMainContainer {
+  background: rgba(13, 16, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .leftCopyHeader h1 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .leftCopyHeader p {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .loginIllustrationImg {
+  mix-blend-mode: screen;
+  filter: contrast(1.08) brightness(1.05) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+  border-radius: 20px;
+}
+
+[data-theme="dark"] .loginRightPanel {
+  background: rgba(10, 14, 30, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .portalTitleHeader h2 {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .roleSegmentedBar {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .roleSegmentBtn {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .roleSegmentBtn.active {
+  background: rgba(249, 87, 42, 0.2);
+  border-color: #F9572A;
+  color: #F9572A;
+}
+
+[data-theme="dark"] .inputFieldGroup label {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .inputWithIconWrapper input {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .inputWithIconWrapper input:focus {
+  border-color: #F9572A;
+}
+
+[data-theme="dark"] .rememberCheckboxLabel {
+  color: #94A3B8;
+}
+
+[data-theme="dark"] .orDividerLine::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .orDividerLine span {
+  background: rgba(10, 14, 30, 0.95);
+  color: #64748B;
+}
+
+[data-theme="dark"] .btnGoogleLogin {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .btnGoogleLogin:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .mockDevModeBox {
+  background: rgba(249, 87, 42, 0.1);
+  border-color: rgba(249, 87, 42, 0.25);
+}
+
+[data-theme="dark"] .mockDevInput {
+  background: rgba(10, 14, 30, 0.9);
+  border-color: rgba(249, 87, 42, 0.3);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .bottomAuthText {
+  color: #94A3B8;
+}
